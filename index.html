@@ -924,7 +924,7 @@
 
 </style>
 </head>
-<body>
+<body data-cms-general-page="inicio">
 
 <header>
   <div class="nav-wrap">
@@ -955,20 +955,20 @@
 
 <section class="hero" id="inicio">
   <div class="hero-bg">
-    <div class="hero-slide" style="background-image:url(images/index-img.jpg)"></div>
-    <div class="hero-slide" style="background-image:url(images/index-img-2.jpg)"></div>
-    <div class="hero-slide" style="background-image:url(images/index-img-3.jpg)"></div>
+    <div class="hero-slide" data-cms-bg="hero_image_1" style="background-image:url(images/index-img.jpg)"></div>
+    <div class="hero-slide" data-cms-bg="hero_image_2" style="background-image:url(images/index-img-2.jpg)"></div>
+    <div class="hero-slide" data-cms-bg="hero_image_3" style="background-image:url(images/index-img-3.jpg)"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="dot"></span> <span>Bernal Oeste &amp; Glew · Inscripciones abiertas todo el año</span></div>
+    <div class="hero-eyebrow"><span class="dot"></span> <span data-cms="hero_eyebrow">Bernal Oeste &amp; Glew · Inscripciones abiertas todo el año</span></div>
     <h1 class="hero-title">Aprendé el oficio<br>que <em>transforma</em> tu futuro.</h1>
-    <p class="hero-sub">Formación profesional en peluquería, barbería y estética con acompañamiento personalizado, práctica real desde el primer día y certificación al finalizar cada curso.</p>
+    <p class="hero-sub" data-cms="hero_sub">Formación profesional en peluquería, barbería y estética con acompañamiento personalizado, práctica real desde el primer día y certificación al finalizar cada curso.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="peluqueria.html">Ver cursos
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a class="btn-whatsapp" href="https://wa.me/5491132068482" target="_blank" rel="noopener">
+      <a class="btn-whatsapp" href="https://wa.me/5491132068482" target="_blank" rel="noopener" data-cms-global-href="whatsapp_link">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
         Escribinos por WhatsApp</a>
     </div>
@@ -1059,8 +1059,8 @@
     <div>
       <div class="eyebrow">Quiénes somos</div>
       <h2 class="section-title">Un instituto pensado para quienes quieren aprender un oficio de verdad.</h2>
-      <p class="about-text">Somos un instituto dedicado a formar profesionales en peluquería y estética, donde la práctica, la experiencia y el acompañamiento son la base de cada aprendizaje. Nuestro objetivo es que cada alumno adquiera las herramientas necesarias para desarrollarse con confianza en el mundo laboral.</p>
-      <div class="about-stats">
+      <p class="about-text" data-cms="about_text">Somos un instituto dedicado a formar profesionales en peluquería y estética, donde la práctica, la experiencia y el acompañamiento son la base de cada aprendizaje. Nuestro objetivo es que cada alumno adquiera las herramientas necesarias para desarrollarse con confianza en el mundo laboral.</p>
+      <div class="about-stats" data-cms-list="stats">
         <div class="stat reveal">
           <div class="stat-num">2</div>
           <div class="stat-label">Sedes: Bernal Oeste y Glew</div>
@@ -1090,9 +1090,9 @@
   <div class="section-inner">
     <div class="eyebrow">Compromiso social</div>
     <h2 class="section-title">Jornadas solidarias.</h2>
-    <p class="section-lede">Como parte de nuestra formación integral, realizamos jornadas solidarias en diferentes instituciones y espacios comunitarios. Nuestros alumnos, acompañados por docentes, ponen en práctica sus conocimientos ofreciendo servicios de peluquería, barbería, trenzados y manicura de forma gratuita, promoviendo el aprendizaje, la experiencia y el compromiso social.</p>
+    <p class="section-lede" data-cms="jornadas_text">Como parte de nuestra formación integral, realizamos jornadas solidarias en diferentes instituciones y espacios comunitarios. Nuestros alumnos, acompañados por docentes, ponen en práctica sus conocimientos ofreciendo servicios de peluquería, barbería, trenzados y manicura de forma gratuita, promoviendo el aprendizaje, la experiencia y el compromiso social.</p>
     <div class="distribuidora-carousel">
-      <div class="distribuidora-track" id="jornadaTrack">
+      <div class="distribuidora-track" id="jornadaTrack" data-cms-list="jornadas_images" data-cms-list-type="img">
       <img src="images/index-img-12.jpg" alt="Jornada solidaria IPPECG 1">
       <img src="images/index-img-13.jpg" alt="Jornada solidaria IPPECG 2">
       <img src="images/index-img-14.jpg" alt="Jornada solidaria IPPECG 3">
@@ -1126,13 +1126,13 @@
   <div class="section-inner">
     <div class="eyebrow">Insumos y materiales</div>
     <h2 class="section-title">Distribuidora de insumos propia.</h2>
-    <p class="distribuidora-text">Dentro del instituto contamos con nuestra propia distribuidora de productos e insumos para peluquería y estética: Distribuidora CBS. Ahí nuestros alumnos pueden conseguir todo lo necesario para sus cursos y talleres, además de kits específicos para cada curso con los insumos esenciales para empezar a practicar desde el primer día.</p>
-    <a class="distribuidora-ig" href="https://instagram.com/distribuidoracbs" target="_blank" rel="noopener">
+    <p class="distribuidora-text" data-cms="distribuidora_text">Dentro del instituto contamos con nuestra propia distribuidora de productos e insumos para peluquería y estética: Distribuidora CBS. Ahí nuestros alumnos pueden conseguir todo lo necesario para sus cursos y talleres, además de kits específicos para cada curso con los insumos esenciales para empezar a practicar desde el primer día.</p>
+    <a class="distribuidora-ig" href="https://instagram.com/distribuidoracbs" target="_blank" rel="noopener" data-cms-href="distribuidora_instagram_link">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      <span>@distribuidoracbs</span>
+      <span data-cms="distribuidora_instagram_handle">@distribuidoracbs</span>
     </a>
     <div class="distribuidora-carousel">
-      <div class="distribuidora-track" id="distTrack">
+      <div class="distribuidora-track" id="distTrack" data-cms-list="distribuidora_images" data-cms-list-type="img">
       <img src="images/index-img-28.jpg" alt="Producto Distribuidora CBS 1">
       <img src="images/index-img-29.jpg" alt="Producto Distribuidora CBS 2">
       <img src="images/index-img-30.jpg" alt="Producto Distribuidora CBS 3">
@@ -1155,9 +1155,9 @@
 
 <section class="workshops">
   <div class="section-inner">
-    <h2 class="reveal">Talleres y perfeccionamientos para seguir creciendo</h2>
-    <p class="reveal" style="transition-delay:0.1s">Peinados, trenzas, esculpidas, tratamientos capilares, Soft gel y mucho más. Consultá el calendario vigente y sumate al que más te sirva.</p>
-    <a class="btn-whatsapp reveal" style="transition-delay:0.2s" href="https://wa.me/5491132068482" target="_blank" rel="noopener">
+    <h2 class="reveal" data-cms="talleres_title">Talleres y perfeccionamientos para seguir creciendo</h2>
+    <p class="reveal" style="transition-delay:0.1s" data-cms="talleres_text">Peinados, trenzas, esculpidas, tratamientos capilares, Soft gel y mucho más. Consultá el calendario vigente y sumate al que más te sirva.</p>
+    <a class="btn-whatsapp reveal" style="transition-delay:0.2s" href="https://wa.me/5491132068482" target="_blank" rel="noopener" data-cms-global-href="whatsapp_link">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
       Consultar talleres disponibles</a>
   </div>
@@ -1167,7 +1167,7 @@
   <div class="section-inner">
     <div class="eyebrow">Egresados</div>
     <h2 class="section-title">Lo que dicen quienes ya pasaron por el instituto.</h2>
-    <div class="testi-photos">
+    <div class="testi-photos" data-cms-list="testimonios_images" data-cms-list-type="testi">
       <div class="testi-photo-wrap reveal"><img src="images/index-img-35.jpg" alt="Testimonio de alumno IPPECG 1"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.08s"><img src="images/index-img-36.jpg" alt="Testimonio de alumno IPPECG 2"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.16s"><img src="images/index-img-37.jpg" alt="Testimonio de alumno IPPECG 3"></div>
@@ -1193,20 +1193,20 @@
       </div>
       <div class="footer-col">
         <h4>Sedes</h4>
-        <p>Bernal Oeste<br><span>Calle 195 n° 1000</span></p>
-        <p style="margin-top:10px;">Glew (nueva sucursal)<br><span>Manuela Pedraza 2046</span></p>
+        <p>Bernal Oeste<br><span data-cms-global="address_bernal">Calle 195 n° 1000</span></p>
+        <p style="margin-top:10px;">Glew (nueva sucursal)<br><span data-cms-global="address_glew">Manuela Pedraza 2046</span></p>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
-        <a href="https://wa.me/5491132068482" target="_blank" rel="noopener">WhatsApp: <span>11-3206-8482</span></a>
-        <a href="mailto:institutoprof.carinagonzalez@gmail.com"><span>institutoprof.carinagonzalez@gmail.com</span></a>
-        <p style="margin-top:10px;">Martes a sábados de 10 a 18hs</p>
+        <a href="https://wa.me/5491132068482" target="_blank" rel="noopener" data-cms-global-href="whatsapp_link">WhatsApp: <span data-cms-global="whatsapp_number">11-3206-8482</span></a>
+        <a href="mailto:institutoprof.carinagonzalez@gmail.com" data-cms-global-mailto="email"><span data-cms-global="email">institutoprof.carinagonzalez@gmail.com</span></a>
+        <p style="margin-top:10px;" data-cms-global="hours">Martes a sábados de 10 a 18hs</p>
       </div>
       <div class="footer-col">
         <h4>Redes</h4>
-        <a href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener">Instagram <span>@ippe.carinagonzalez</span></a>
-        <a href="https://www.facebook.com/CarinaGonzalezInstitutoProfesionalDePeluqueria/?locale=es_LA" target="_blank" rel="noopener">Facebook IPPECG</a>
-        <a href="https://www.tiktok.com/@ippe.cg" target="_blank" rel="noopener">TikTok <span>@ippe.cg</span></a>
+        <a href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">Instagram <span data-cms-global="instagram_handle">@ippe.carinagonzalez</span></a>
+        <a href="https://www.facebook.com/CarinaGonzalezInstitutoProfesionalDePeluqueria/?locale=es_LA" target="_blank" rel="noopener" data-cms-global-href="facebook_link">Facebook IPPECG</a>
+        <a href="https://www.tiktok.com/@ippe.cg" target="_blank" rel="noopener" data-cms-global-href="tiktok_link">TikTok <span data-cms-global="tiktok_handle">@ippe.cg</span></a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1216,7 +1216,7 @@
   </div>
 </footer>
 
-<a class="wa-bubble" href="https://wa.me/5491132068482" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+<a class="wa-bubble" href="https://wa.me/5491132068482" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp" data-cms-global-href="whatsapp_link">
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
 </a>
 
@@ -1266,5 +1266,6 @@
     });
   }
 </script>
+<script src="cms-loader.js"></script>
 </body>
 </html>

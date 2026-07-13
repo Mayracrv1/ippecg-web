@@ -139,6 +139,71 @@ collections:
 
 
 
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - name: "inicio"
+        label: "Inicio (home)"
+        file: "content/pages/inicio.json"
+        fields:
+          - {label: "Texto pequeño arriba del título (sedes / inscripciones)", name: "hero_eyebrow", widget: "string"}
+          - {label: "Bajada debajo del título principal", name: "hero_sub", widget: "text"}
+          - {label: "Foto de fondo 1 (carrusel del inicio)", name: "hero_image_1", widget: "image"}
+          - {label: "Foto de fondo 2 (carrusel del inicio)", name: "hero_image_2", widget: "image"}
+          - {label: "Foto de fondo 3 (carrusel del inicio)", name: "hero_image_3", widget: "image"}
+          - {label: "Texto de 'Quiénes somos' (resumen en el inicio)", name: "about_text", widget: "text"}
+          - label: "Estadísticas (los 4 números destacados)"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Número", name: "num", widget: "string"}
+              - {label: "Descripción", name: "label", widget: "string"}
+          - {label: "Texto de Jornadas solidarias", name: "jornadas_text", widget: "text"}
+          - label: "Fotos de Jornadas solidarias"
+            name: "jornadas_images"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+          - {label: "Texto de Distribuidora de insumos", name: "distribuidora_text", widget: "text"}
+          - {label: "Link de Instagram de la distribuidora", name: "distribuidora_instagram_link", widget: "string"}
+          - {label: "Usuario de Instagram de la distribuidora (texto visible)", name: "distribuidora_instagram_handle", widget: "string"}
+          - label: "Fotos de la Distribuidora"
+            name: "distribuidora_images"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+          - {label: "Título de Talleres y perfeccionamientos", name: "talleres_title", widget: "string"}
+          - {label: "Texto de Talleres y perfeccionamientos", name: "talleres_text", widget: "text"}
+          - label: "Fotos de Testimonios / Egresados"
+            name: "testimonios_images"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+  - name: "site"
+    label: "Datos de contacto (aparecen en todo el sitio)"
+    files:
+      - name: "contact"
+        label: "Contacto general"
+        file: "content/site/contact.json"
+        fields:
+          - {label: "Link de WhatsApp completo (https://wa.me/54911...)", name: "whatsapp_link", widget: "string"}
+          - {label: "Número de WhatsApp (texto que se muestra)", name: "whatsapp_number", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Horario de atención", name: "hours", widget: "string"}
+          - {label: "Dirección Bernal Oeste (corta, para el pie de página)", name: "address_bernal", widget: "string"}
+          - {label: "Dirección Glew (corta, para el pie de página)", name: "address_glew", widget: "string"}
+          - {label: "Dirección Bernal Oeste (completa, para Contacto)", name: "address_bernal_full", widget: "string"}
+          - {label: "Dirección Glew (completa, para Contacto)", name: "address_glew_full", widget: "string"}
+          - {label: "Link de Instagram", name: "instagram_link", widget: "string"}
+          - {label: "Usuario de Instagram (texto visible)", name: "instagram_handle", widget: "string"}
+          - {label: "Link de Facebook", name: "facebook_link", widget: "string"}
+          - {label: "Link de TikTok", name: "tiktok_link", widget: "string"}
+          - {label: "Usuario de TikTok (texto visible)", name: "tiktok_handle", widget: "string"}
+
   - name: "team"
     label: "Equipo"
     files:

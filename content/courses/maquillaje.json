@@ -1,0 +1,80 @@
+{
+  "title": "Curso de Maquillaje Profesional 💄",
+  "subtitle": "¿Te apasiona el maquillaje y soñás con dedicarte profesionalmente a la belleza? Este curso es ideal para aprender técnicas actuales, desarrollar práctica real y formarte con seguridad y profesionalismo.",
+  "hero_image": "images/maquillaje-img.jpg",
+  "duration": "5 meses",
+  "modality": "Clases teóricas y prácticas sobre modelos reales",
+  "certification": "Diploma y carnet profesional al finalizar",
+  "material": "Grupo de WhatsApp, teoría en PDF y clases grabadas",
+  "checklist": [
+    "Preparación y cuidado de la piel",
+    "Visajismo y correcciones",
+    "Maquillaje social de día y de noche",
+    "Novias, madrinas y quinceañeras",
+    "Smokey eyes y cut crease",
+    "Perfilado y laminado de cejas",
+    "Colocación de pestañas postizas"
+  ],
+  "gallery": [
+    {
+      "image": "images/maquillaje-img-2.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 1"
+    },
+    {
+      "image": "images/maquillaje-img-3.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 2"
+    },
+    {
+      "image": "images/maquillaje-img-4.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 3"
+    },
+    {
+      "image": "images/maquillaje-img-5.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 4"
+    },
+    {
+      "image": "images/maquillaje-img-6.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 5"
+    },
+    {
+      "image": "images/maquillaje-img-7.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 6"
+    },
+    {
+      "image": "images/maquillaje-img.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 7"
+    },
+    {
+      "image": "images/maquillaje-img-8.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 8"
+    },
+    {
+      "image": "images/maquillaje-img-9.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 9"
+    },
+    {
+      "image": "images/maquillaje-img-10.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 10"
+    },
+    {
+      "image": "images/maquillaje-img-11.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 11"
+    },
+    {
+      "image": "images/maquillaje-img-12.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 12"
+    },
+    {
+      "image": "images/maquillaje-img-13.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 13"
+    },
+    {
+      "image": "images/maquillaje-img-14.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 14"
+    },
+    {
+      "image": "images/maquillaje-img-15.jpg",
+      "alt": "Trabajo de maquillaje de alumnas IPPECG 15"
+    }
+  ]
+}

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — IPPECG Instituto Profesional de Peluquería y Estética Carina González</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bordo: #C93834;
+    --bordo-dark: #7A1518;
+    --bordo-deep: #4E0E10;
+    --black: #0A0A0A;
+    --white: #FFFFFF;
+    --bone: #F7F3EE;
+    --line: rgba(10,10,10,0.08);
+    --display: 'Fraunces', serif;
+    --body: 'Manrope', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);
+    color:var(--black);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+
+  .checker-rule{
+    height:6px;
+    width:100%;
+    background-image: linear-gradient(45deg, var(--black) 25%, transparent 25%, transparent 75%, var(--black) 75%),
+                       linear-gradient(45deg, var(--black) 25%, transparent 25%, transparent 75%, var(--black) 75%);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+    background-color: var(--white);
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;left:0;right:0;
+    z-index:100;
+    background:rgba(201,56,52,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid rgba(0,0,0,0.18);
+  }
+  .nav-wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding:16px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+  }
+  .logo img{
+    height:38px;
+    width:auto;
+    display:block;
+  }
+  .logo span{
+    color:var(--black);
+    font-style:italic;
+    font-weight:500;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    opacity:0.75;
+  }
+  nav.links{
+    display:flex;
+    gap:36px;
+  }
+  nav.links a{
+    font-size:0.86rem;
+    font-weight:600;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.82);
+    position:relative;
+    padding:4px 0;
+    transition:color .25s ease;
+  }
+  nav.links a.active{color:var(--white);}
+  nav.links a::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:0;
+    width:0;height:2px;
+    background:var(--black);
+    transition:width .3s ease;
+  }
+  nav.links a:hover{color:var(--white);}
+  nav.links a:hover::after, nav.links a.active::after{width:100%;}
+  .nav-cta{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#25D366;
+    color:var(--white);
+    font-size:0.82rem;
+    font-weight:700;
+    padding:10px 20px;
+    border-radius:2px;
+    letter-spacing:0.03em;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .nav-cta:hover{background:#1eb85a; transform:translateY(-1px);}
+  .nav-cta svg{width:16px;height:16px;fill:var(--white);}
+
+  /* ---------- PAGE HERO ---------- */
+  .page-hero{
+    background:var(--black);
+    padding:110px 32px 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .page-hero::before{
+    content:'';
+    position:absolute;
+    top:-40%; right:-10%;
+    width:600px;height:600px;
+    background:radial-gradient(circle, rgba(201,56,52,0.35) 0%, transparent 70%);
+  }
+  .section-inner{max-width:1280px; margin:0 auto; position:relative; z-index:1;}
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:0.78rem;
+    font-weight:800;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:#ff8a80;
+    margin-bottom:20px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:32px;height:2px;
+    background:#ff8a80;
+  }
+  h1.page-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.6rem, 5.5vw, 4.6rem);
+    line-height:1.02;
+    color:var(--white);
+    max-width:720px;
+    letter-spacing:-0.01em;
+  }
+  .page-sub{
+    margin-top:24px;
+    max-width:560px;
+    color:rgba(255,255,255,0.78);
+    font-size:1.08rem;
+    line-height:1.65;
+    font-weight:500;
+  }
+  .hero-cta-row{
+    margin-top:34px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .btn-whatsapp{
+    background:#25D366;
+    color:var(--white);
+    font-weight:700;
+    font-size:0.95rem;
+    padding:16px 30px;
+    border-radius:2px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    letter-spacing:0.01em;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .btn-whatsapp:hover{background:#1eb85a; transform:translateY(-2px);}
+  .btn-ghost{
+    border:1.5px solid rgba(255,255,255,0.55);
+    color:var(--white);
+    font-weight:700;
+    font-size:0.95rem;
+    padding:16px 30px;
+    border-radius:2px;
+    transition:all .25s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .btn-ghost:hover{background:var(--white); color:var(--black); border-color:var(--white);}
+
+  /* ---------- SEDES ---------- */
+  section{padding:100px 32px;}
+  .sedes-head{
+    max-width:640px;
+    margin-bottom:60px;
+  }
+  .sedes-head .eyebrow{color:var(--bordo);}
+  .sedes-head .eyebrow::before{background:var(--bordo);}
+  h2.section-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2rem, 3.6vw, 3rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+  }
+  .section-lede{
+    max-width:560px;
+    color:#4a4a4a;
+    font-size:1.05rem;
+    line-height:1.7;
+    margin-top:18px;
+  }
+  .sedes-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .sede-card{
+    background:var(--white);
+  }
+  .sede-map{
+    width:100%;
+    aspect-ratio:16/10;
+    border:0;
+    display:block;
+    filter:grayscale(0.15) contrast(1.02);
+  }
+  .sede-body{
+    padding:36px;
+  }
+  .sede-tag{
+    font-size:0.74rem;
+    font-weight:800;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--bordo);
+    background:rgba(201,56,52,0.08);
+    display:inline-block;
+    padding:4px 12px;
+    border-radius:2px;
+    margin-bottom:16px;
+  }
+  .sede-name{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.7rem;
+    letter-spacing:-0.005em;
+  }
+  .sede-address{
+    margin-top:10px;
+    color:#4a4a4a;
+    font-size:0.98rem;
+    line-height:1.6;
+  }
+  .sede-hours{
+    margin-top:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.88rem;
+    color:#6a6a6a;
+    font-weight:600;
+  }
+  .sede-hours svg{width:15px;height:15px; flex-shrink:0;}
+  .sede-actions{
+    margin-top:26px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .sede-btn-wa{
+    background:#25D366;
+    color:var(--white);
+    font-weight:700;
+    font-size:0.86rem;
+    padding:13px 22px;
+    border-radius:2px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:background .25s ease;
+  }
+  .sede-btn-wa:hover{background:#1eb85a;}
+  .sede-btn-wa svg{width:15px;height:15px;fill:var(--white);}
+  .sede-btn-map{
+    background:var(--black);
+    color:var(--white);
+    font-weight:700;
+    font-size:0.86rem;
+    padding:13px 22px;
+    border-radius:2px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:background .25s ease;
+  }
+  .sede-btn-map:hover{background:#2a2a2a;}
+
+  /* ---------- SEDE PRIMARIA / PROXIMAMENTE ---------- */
+  .sedes-stack{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .sede-primary{
+    background:var(--white);
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+  }
+  .sede-primary .sede-map{
+    aspect-ratio:auto;
+    height:100%;
+    min-height:340px;
+  }
+  .sede-primary .sede-body{
+    padding:44px 44px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .sede-tag-primary{
+    font-size:0.74rem;
+    font-weight:800;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--white);
+    background:var(--bordo);
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:2px;
+    margin-bottom:18px;
+    width:fit-content;
+  }
+  .sede-primary .sede-name{font-size:2rem;}
+  .sede-soon{
+    background:var(--bone);
+    display:grid;
+    grid-template-columns:220px 1fr;
+    align-items:center;
+    gap:0;
+  }
+  .sede-soon-visual{
+    height:100%;
+    min-height:160px;
+    background:
+      linear-gradient(135deg, rgba(10,10,10,0.06) 25%, transparent 25%, transparent 75%, rgba(10,10,10,0.06) 75%),
+      linear-gradient(135deg, rgba(10,10,10,0.06) 25%, transparent 25%, transparent 75%, rgba(10,10,10,0.06) 75%);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .sede-soon-visual svg{width:36px;height:36px; opacity:0.35;}
+  .sede-soon-body{
+    padding:28px 32px;
+  }
+  .sede-tag-soon{
+    font-size:0.72rem;
+    font-weight:800;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--bordo);
+    border:1.5px solid var(--bordo);
+    display:inline-block;
+    padding:4px 12px;
+    border-radius:2px;
+    margin-bottom:12px;
+  }
+  .sede-soon .sede-name{font-size:1.35rem;}
+  .sede-soon .sede-address{font-size:0.9rem; margin-top:6px;}
+  .sede-soon-note{
+    margin-top:10px;
+    font-size:0.88rem;
+    color:#6a6a6a;
+    line-height:1.55;
+  }
+
+  /* ---------- CONTACT SPLIT ---------- */
+  .contact-split{
+    padding:0;
+  }
+  .contact-split-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:680px;
+  }
+  .contact-left{
+    position:relative;
+    background-image:url(images/contacto-img.jpg);
+    background-size:cover;
+    background-position:center 35%;
+    padding:70px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .contact-left::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(115deg, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.72) 55%, rgba(201,56,52,0.55) 100%);
+  }
+  .contact-left-inner{
+    position:relative;
+    z-index:1;
+    max-width:460px;
+  }
+  .contact-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.2rem, 4vw, 3.4rem);
+    color:var(--white);
+    letter-spacing:-0.01em;
+    line-height:1.05;
+  }
+  .contact-sub{
+    margin-top:18px;
+    color:rgba(255,255,255,0.8);
+    font-size:1.02rem;
+    line-height:1.65;
+  }
+  .contact-info-list{
+    margin-top:48px;
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+  }
+  .contact-info-item{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .contact-info-icon{
+    width:42px;height:42px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:var(--bordo);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .contact-info-icon svg{width:19px;height:19px; fill:var(--white);}
+  .contact-info-icon.wa{background:#25D366;}
+  .contact-info-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.15rem;
+    color:var(--white);
+    margin-bottom:4px;
+  }
+  .contact-info-text{
+    color:rgba(255,255,255,0.78);
+    font-size:0.95rem;
+    line-height:1.6;
+  }
+  .contact-info-text a{color:var(--white); font-weight:700; text-decoration:underline; text-underline-offset:3px;}
+
+  .contact-right{
+    display:flex;
+    flex-direction:column;
+  }
+  .contact-map-block{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    border-bottom:1px solid var(--line);
+  }
+  .contact-map-block:last-child{border-bottom:none;}
+  .contact-map-label{
+    padding:20px 32px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .contact-map-name{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.15rem;
+  }
+  .contact-map-address{
+    font-size:0.85rem;
+    color:#6a6a6a;
+    margin-top:3px;
+  }
+  .contact-map-link{
+    font-size:0.8rem;
+    font-weight:700;
+    color:var(--bordo);
+    white-space:nowrap;
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+  }
+  .contact-map-iframe{
+    width:100%;
+    flex:1;
+    min-height:220px;
+    border:0;
+    display:block;
+    filter:grayscale(0.2) contrast(1.02);
+  }
+
+  @media (max-width: 980px){
+    .contact-split-grid{grid-template-columns:1fr; min-height:auto;}
+    .contact-left{padding:60px 32px;}
+    .contact-map-iframe{min-height:280px;}
+  }
+
+  /* ---------- INFO STRIP ---------- */
+  .info-strip{
+    background:var(--bone);
+  }
+  .info-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:56px;
+  }
+  .info-card{
+    background:var(--white);
+    padding:38px 32px;
+  }
+  .info-icon{
+    width:44px;height:44px;
+    border-radius:50%;
+    background:rgba(201,56,52,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+  }
+  .info-icon svg{width:20px;height:20px; stroke:var(--bordo);}
+  .info-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.2rem;
+    margin-bottom:8px;
+  }
+  .info-text{
+    color:#5a5a5a;
+    font-size:0.92rem;
+    line-height:1.65;
+  }
+  .info-text a{color:var(--bordo); font-weight:700;}
+
+  /* ---------- FOOTER CTA ---------- */
+  .footer-cta{
+    background:var(--black);
+    color:var(--white);
+    padding:110px 32px 60px;
+  }
+  .fc-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:40px;
+    padding-bottom:70px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .fc-top h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2rem, 4vw, 3.4rem);
+    max-width:600px;
+    line-height:1.1;
+  }
+  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500;}
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-top:60px;
+  }
+  .footer-col h4{
+    font-size:0.76rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.5);
+    margin-bottom:18px;
+  }
+  .footer-col p, .footer-col a{
+    font-size:0.92rem;
+    color:rgba(255,255,255,0.82);
+    line-height:1.8;
+    display:block;
+  }
+  .footer-col a:hover{color:var(--bordo);}
+  .footer-bottom{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:1px solid rgba(255,255,255,0.12);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:0.78rem;
+    color:rgba(255,255,255,0.45);
+  }
+
+  /* ---------- WHATSAPP BUBBLE ---------- */
+  .wa-bubble{
+    position:fixed;
+    bottom:26px;
+    right:26px;
+    z-index:200;
+    width:60px;height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+    transition:transform .25s ease;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  .wa-bubble:hover{transform:scale(1.08);}
+  .wa-bubble svg{width:30px;height:30px;fill:var(--white);}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 8px 24px rgba(0,0,0,0.35), 0 0 0 0 rgba(37,211,102,0.5);}
+    50%{box-shadow:0 8px 24px rgba(0,0,0,0.35), 0 0 0 10px rgba(37,211,102,0);}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 980px){
+    nav.links{display:none;}
+    .nav-cta{display:none;}
+    .sede-primary{grid-template-columns:1fr;}
+    .sede-primary .sede-map{min-height:260px;}
+    .sede-soon{grid-template-columns:1fr;}
+    .sede-soon-visual{min-height:100px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 640px){
+    section{padding:70px 28px;}
+    .page-hero{padding:90px 28px 60px;}
+    .page-hero p{max-width:100%; font-size:0.98rem;}
+    .nav-wrap{padding:12px 16px;}
+    .logo img{height:44px;}
+    .nav-cta{padding:8px 12px; font-size:0.72rem; gap:5px;}
+    .nav-cta svg{width:13px;height:13px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .fc-top{flex-direction:column; align-items:flex-start;}
+  }
+
+  @media (max-width: 360px){
+    .nav-cta span.nav-cta-text{display:none;}
+    .nav-cta{padding:9px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ---------- MOBILE HAMBURGER MENU ---------- */
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px;height:34px;
+    background:none;border:none;
+    cursor:pointer;
+    z-index:210;
+    padding:0;
+  }
+  .hamburger span{
+    display:block;
+    width:100%;height:2px;
+    background:var(--white);
+    border-radius:2px;
+    transition:transform .25s ease, opacity .2s ease;
+  }
+  body.menu-open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  body.menu-open .hamburger span:nth-child(2){opacity:0;}
+  body.menu-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-nav{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg, var(--bordo) 0%, var(--bordo-dark) 100%);
+    z-index:200;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:32px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-12px);
+    transition:opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+  }
+  body.menu-open .mobile-nav{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+    transition:opacity .25s ease, transform .25s ease, visibility 0s linear 0s;
+  }
+  .mobile-nav a{
+    font-family:var(--display);
+    font-size:1.6rem;
+    color:var(--white);
+    text-decoration:none;
+    font-weight:500;
+  }
+  .mobile-nav a.mobile-cta{
+    margin-top:12px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#25D366;
+    color:var(--white);
+    font-family:var(--body);
+    font-weight:700;
+    font-size:1rem;
+    padding:14px 26px;
+    border-radius:999px;
+  }
+  .mobile-nav a.mobile-cta svg{width:18px;height:18px;fill:var(--white);}
+  body.menu-open{overflow:hidden;}
+
+  @media (max-width: 980px){
+    .hamburger{display:flex;}
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><img src="images/logo-white-v2.png" alt="IPPECG"></a>
+    <button class="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="peluqueria.html">Peluquería</a>
+      <a href="estetica.html">Estética</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/5491132068482" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
+      <span class="nav-cta-text">Contacto</span>
+    </a>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <a href="index.html">Inicio</a>
+      <a href="peluqueria.html">Peluquería</a>
+      <a href="estetica.html">Estética</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="contacto.html" class="active">Contacto</a>
+</div>
+
+
+<section class="contact-split">
+  <div class="contact-split-grid">
+    <div class="contact-left">
+      <div class="contact-left-inner">
+        <h1 class="contact-title">Contacto</h1>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-info-icon wa">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-title">Escribinos al WhatsApp</div>
+              <div class="contact-info-text"><a href="https://wa.me/5491132068482" target="_blank" rel="noopener"><span>11-3206-8482</span></a></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-title">Nuestras redes</div>
+              <div class="contact-info-text">
+                <a href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener">Instagram <span>@ippe.carinagonzalez</span></a><br>
+                <a href="https://www.tiktok.com/@ippe.cg" target="_blank" rel="noopener">TikTok <span>@ippe.cg</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-title">Ubicación</div>
+              <div class="contact-info-text"><span>Bernal Oeste, Calle 195 n.º 1000</span><br><span>Glew, Manuela Pedraza 2046</span></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-title">Horario</div>
+              <div class="contact-info-text">Martes a sábados de 10 a 18hs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="contact-map-block">
+        <div class="contact-map-label">
+          <div>
+            <div class="contact-map-name">Bernal Oeste</div>
+            <div class="contact-map-address">Calle 195 n.º 1000, Bernal Oeste</div>
+          </div>
+          <a class="contact-map-link" href="https://www.google.com/maps/dir/?api=1&destination=-34.7471354,-58.3353536" target="_blank" rel="noopener">
+            Cómo llegar
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </div>
+        <iframe class="contact-map-iframe" loading="lazy" src="https://maps.google.com/maps?q=-34.7471354,-58.3353536&z=16&output=embed" allowfullscreen></iframe>
+      </div>
+      <div class="contact-map-block">
+        <div class="contact-map-label">
+          <div>
+            <div class="contact-map-name">Glew</div>
+            <div class="contact-map-address">Manuela Pedraza 2046, Glew</div>
+          </div>
+          <a class="contact-map-link" href="https://www.google.com/maps/dir/?api=1&destination=-34.8796681,-58.3972288" target="_blank" rel="noopener">
+            Cómo llegar
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </div>
+        <iframe class="contact-map-iframe" loading="lazy" src="https://maps.google.com/maps?q=-34.8796681,-58.3972288&z=16&output=embed" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-cta">
+  <div class="section-inner">
+    <div class="fc-top">
+      <h2>¿Lista para empezar tu <em>formación profesional</em>?</h2>
+      <a class="btn-whatsapp" href="https://wa.me/5491132068482" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
+        Escribinos por WhatsApp</a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>IPPECG</h4>
+        <p>Instituto Profesional de Peluquería y Estética Carina González. Formación con certificación, práctica real y acompañamiento personalizado.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sedes</h4>
+        <p>Bernal Oeste<br><span>Calle 195 n° 1000</span></p>
+        <p style="margin-top:10px;">Glew<br><span>Manuela Pedraza 2046</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491132068482" target="_blank" rel="noopener">WhatsApp: <span>11-3206-8482</span></a>
+        <a href="mailto:institutoprof.carinagonzalez@gmail.com"><span>institutoprof.carinagonzalez@gmail.com</span></a>
+        <p style="margin-top:10px;">Martes a sábados de 10 a 18hs</p>
+      </div>
+      <div class="footer-col">
+        <h4>Redes</h4>
+        <a href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener">Instagram <span>@ippe.carinagonzalez</span></a>
+        <a href="https://www.facebook.com/CarinaGonzalezInstitutoProfesionalDePeluqueria/?locale=es_LA" target="_blank" rel="noopener">Facebook IPPECG</a>
+        <a href="https://www.tiktok.com/@ippe.cg" target="_blank" rel="noopener">TikTok <span>@ippe.cg</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IPPECG — Instituto Profesional de Peluquería y Estética Carina González</span>
+      <span>Distribuidora CBS · @distribuidoracbs</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-bubble" href="https://wa.me/5491132068482" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+
+<script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var body = document.body;
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    body.classList.toggle('menu-open');
+  });
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      body.classList.remove('menu-open');
+    });
+  });
+})();
+</script>
+<script src="cms-loader.js"></script>
+</body>
+</html>

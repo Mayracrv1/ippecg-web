@@ -1,0 +1,48 @@
+{
+  "title": "Curso de Manicuría Profesional 💅",
+  "subtitle": "Formate en manicuría y pedicuría con técnicas de esmaltado semipermanente, gel, diseños y decoración de uñas. Práctica real desde la primera clase.",
+  "hero_image": "images/manicuria-img.jpg",
+  "duration": "2 meses",
+  "modality": "Clases teóricas y prácticas sobre modelos reales",
+  "certification": "Diploma y carnet profesional al finalizar",
+  "material": "Grupo de WhatsApp, guía teórica y clases grabadas",
+  "checklist": [
+    "Anatomía de la uña e higiene y bioseguridad",
+    "Manicuría y pedicuría tradicional",
+    "Esmaltado semipermanente",
+    "Uñas esculpidas y soft gel",
+    "Diseño y decoración de uñas",
+    "Uso y mantenimiento de herramientas y lámpara UV/LED",
+    "Tendencias actuales en nail art"
+  ],
+  "gallery": [
+    {
+      "image": "images/manicuria-img-2.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 1"
+    },
+    {
+      "image": "images/manicuria-img-3.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 2"
+    },
+    {
+      "image": "images/manicuria-img-4.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 3"
+    },
+    {
+      "image": "images/manicuria-img-5.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 4"
+    },
+    {
+      "image": "images/manicuria-img-6.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 5"
+    },
+    {
+      "image": "images/manicuria-img-7.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 6"
+    },
+    {
+      "image": "images/manicuria-img-8.jpg",
+      "alt": "Trabajo de manicuría alumnas IPPECG 7"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+locale: "es"
+
+collections:
+  - name: "courses"
+    label: "Cursos"
+    files:
+      - name: "maquillaje"
+        label: "Maquillaje profesional"
+        file: "content/courses/maquillaje.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Duración", name: "duration", widget: "string"}
+          - {label: "Modalidad", name: "modality", widget: "string"}
+          - {label: "Certificación", name: "certification", widget: "string"}
+          - {label: "Material incluido", name: "material", widget: "string"}
+          - label: "¿Qué vas a aprender? (lista de puntos)"
+            name: "checklist"
+            widget: "list"
+          - label: "Galería de fotos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+      - name: "tocados"
+        label: "Tocados artesanales"
+        file: "content/courses/tocados.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Duración", name: "duration", widget: "string"}
+          - {label: "Modalidad", name: "modality", widget: "string"}
+          - {label: "Certificación", name: "certification", widget: "string"}
+          - {label: "Material incluido", name: "material", widget: "string"}
+          - label: "¿Qué vas a aprender? (lista de puntos)"
+            name: "checklist"
+            widget: "list"
+          - label: "Galería de fotos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+      - name: "colorimetria"
+        label: "Colorimetría"
+        file: "content/courses/colorimetria.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Duración", name: "duration", widget: "string"}
+          - {label: "Modalidad", name: "modality", widget: "string"}
+          - {label: "Certificación", name: "certification", widget: "string"}
+          - {label: "Material incluido", name: "material", widget: "string"}
+          - label: "¿Qué vas a aprender? (lista de puntos)"
+            name: "checklist"
+            widget: "list"
+          - label: "Galería de fotos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+      - name: "barberia"
+        label: "Barbería inicial"
+        file: "content/courses/barberia.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Duración", name: "duration", widget: "string"}
+          - {label: "Modalidad", name: "modality", widget: "string"}
+          - {label: "Certificación", name: "certification", widget: "string"}
+          - {label: "Material incluido", name: "material", widget: "string"}
+          - label: "¿Qué vas a aprender? (lista de puntos)"
+            name: "checklist"
+            widget: "list"
+          - label: "Galería de fotos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+      - name: "manicuria"
+        label: "Manicuría profesional"
+        file: "content/courses/manicuria.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Duración", name: "duration", widget: "string"}
+          - {label: "Modalidad", name: "modality", widget: "string"}
+          - {label: "Certificación", name: "certification", widget: "string"}
+          - {label: "Material incluido", name: "material", widget: "string"}
+          - label: "¿Qué vas a aprender? (lista de puntos)"
+            name: "checklist"
+            widget: "list"
+          - label: "Galería de fotos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+      - name: "peluqueria-basica"
+        label: "Peluquería básica"
+        file: "content/courses/peluqueria-basica.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Duración", name: "duration", widget: "string"}
+          - {label: "Modalidad", name: "modality", widget: "string"}
+          - {label: "Certificación", name: "certification", widget: "string"}
+          - {label: "Material incluido", name: "material", widget: "string"}
+          - label: "¿Qué vas a aprender? (lista de puntos)"
+            name: "checklist"
+            widget: "list"
+          - label: "Galería de fotos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
+
+
+  - name: "team"
+    label: "Equipo"
+    files:
+      - name: "director"
+        label: "Directora"
+        file: "content/team/director.json"
+        fields:
+          - {label: "Nombre", name: "name", widget: "string"}
+          - {label: "Biografía (párrafo 1)", name: "bio_p1", widget: "text"}
+          - {label: "Biografía (párrafo 2)", name: "bio_p2", widget: "text"}
+          - {label: "Foto", name: "photo", widget: "image"}
+
+      - name: "teacher-maquillaje"
+        label: "Profesora de Maquillaje"
+        file: "content/team/teacher-maquillaje.json"
+        fields:
+          - {label: "Nombre", name: "name", widget: "string"}
+          - {label: "Cargo", name: "role", widget: "string"}
+          - {label: "Biografía (párrafo 1)", name: "bio_p1", widget: "text"}
+          - {label: "Biografía (párrafo 2)", name: "bio_p2", widget: "text"}
+          - {label: "Foto", name: "photo", widget: "image"}

@@ -1,0 +1,68 @@
+{
+  "title": "Curso de Colorimetría 🎨",
+  "subtitle": "Dominá la teoría y la técnica del color: desde el diagnóstico capilar hasta las mechas, el balayage y la corrección de tono. Formate para trabajar con seguridad en cualquier tipo de coloración.",
+  "hero_image": "images/colorimetria-img.jpg",
+  "duration": "3 meses",
+  "modality": "Clases teóricas y prácticas sobre modelos reales",
+  "certification": "Diploma y carnet profesional al finalizar",
+  "material": "Grupo de WhatsApp, guía teórica y clases grabadas",
+  "checklist": [
+    "Teoría del color y círculo cromático",
+    "Diagnóstico capilar y selección de tono",
+    "Aplicación de tinturas y decoloración",
+    "Técnicas de mechas y balayage",
+    "Matización y corrección de color",
+    "Tratamientos y cuidado post-color",
+    "Tendencias actuales en coloración"
+  ],
+  "gallery": [
+    {
+      "image": "images/colorimetria-img-2.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 1"
+    },
+    {
+      "image": "images/colorimetria-img-3.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 2"
+    },
+    {
+      "image": "images/colorimetria-img-4.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 3"
+    },
+    {
+      "image": "images/colorimetria-img-5.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 4"
+    },
+    {
+      "image": "images/colorimetria-img-6.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 5"
+    },
+    {
+      "image": "images/colorimetria-img-7.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 6"
+    },
+    {
+      "image": "images/colorimetria-img-8.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 7"
+    },
+    {
+      "image": "images/colorimetria-img-9.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 8"
+    },
+    {
+      "image": "images/colorimetria-img-10.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 9"
+    },
+    {
+      "image": "images/colorimetria-img-11.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 10"
+    },
+    {
+      "image": "images/colorimetria-img-12.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 11"
+    },
+    {
+      "image": "images/colorimetria-img-13.jpg",
+      "alt": "Trabajo de colorimetría alumnas IPPECG 12"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Curso de Tocados Artesanales 🌸",
+  "subtitle": "Tocados artesanales diseñados para novias, quinceañeras, madrinas y todo tipo de eventos sociales. Aprendé a diseñar y armar piezas únicas, a medida de cada peinado y cada ocasión.",
+  "hero_image": "images/tocados-img.jpg",
+  "duration": "2 meses",
+  "modality": "Clases teórico-prácticas con armado de tocados propios",
+  "certification": "Diploma y carnet profesional al finalizar",
+  "material": "Grupo de WhatsApp, guía de materiales y clases grabadas",
+  "checklist": [
+    "Diseño y armado de bases para tocados",
+    "Uso de flores artificiales, tul, plumas y pedrería",
+    "Tocados para novias",
+    "Tocados para quinceañeras y fiestas de 15",
+    "Tocados para madrinas e invitadas",
+    "Técnicas de fijación y adaptación al peinado",
+    "Tendencias y personalización según el evento"
+  ],
+  "gallery": [
+    {
+      "image": "images/tocados-img-2.jpg",
+      "alt": "Tocado artesanal IPPECG 1"
+    },
+    {
+      "image": "images/tocados-img-3.jpg",
+      "alt": "Tocado artesanal IPPECG 2"
+    },
+    {
+      "image": "images/tocados-img-4.jpg",
+      "alt": "Tocado artesanal IPPECG 3"
+    },
+    {
+      "image": "images/tocados-img-5.jpg",
+      "alt": "Tocado artesanal IPPECG 4"
+    },
+    {
+      "image": "images/tocados-img-6.jpg",
+      "alt": "Tocado artesanal IPPECG 5"
+    },
+    {
+      "image": "images/tocados-img-7.jpg",
+      "alt": "Tocado artesanal IPPECG 6"
+    }
+  ]
+}

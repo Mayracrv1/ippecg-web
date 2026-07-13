@@ -1,0 +1,44 @@
+{
+  "title": "Curso de Barbería Inicial ✂️",
+  "subtitle": "Aprendé el oficio de barbero desde cero: cortes clásicos y modernos, degradés, arreglo y diseño de barba, con práctica real sobre modelos desde las primeras clases.",
+  "hero_image": "images/barberia-img.jpg",
+  "duration": "2 meses",
+  "modality": "Clases teóricas y prácticas sobre modelos reales",
+  "certification": "Diploma y carnet profesional al finalizar",
+  "material": "Grupo de WhatsApp, guía teórica y clases grabadas",
+  "checklist": [
+    "Uso y mantenimiento de máquinas y herramientas",
+    "Cortes clásicos y modernos",
+    "Degradés (fade bajo, medio y alto)",
+    "Diseño y perfilado de barba",
+    "Afeitado clásico a navaja",
+    "Práctica sobre cabezas de entrenamiento y modelos reales",
+    "Tendencias actuales en barbería"
+  ],
+  "gallery": [
+    {
+      "image": "images/barberia-img-2.jpg",
+      "alt": "Trabajo de barbería alumnos IPPECG 1"
+    },
+    {
+      "image": "images/barberia-img-3.jpg",
+      "alt": "Trabajo de barbería alumnos IPPECG 2"
+    },
+    {
+      "image": "images/barberia-img-4.jpg",
+      "alt": "Trabajo de barbería alumnos IPPECG 3"
+    },
+    {
+      "image": "images/barberia-img-5.jpg",
+      "alt": "Trabajo de barbería alumnos IPPECG 4"
+    },
+    {
+      "image": "images/barberia-img-6.jpg",
+      "alt": "Trabajo de barbería alumnos IPPECG 5"
+    },
+    {
+      "image": "images/barberia-img-7.jpg",
+      "alt": "Alumnos de barbería IPPECG con bandera argentina"
+    }
+  ]
+}

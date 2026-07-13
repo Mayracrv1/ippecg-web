@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso de Tocados Artesanales — IPPECG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bordo: #C73208;
+    --bordo-dark: #7A1518;
+    --black: #0A0A0A;
+    --white: #FFFFFF;
+    --bone: #F7F3EE;
+    --line: rgba(10,10,10,0.08);
+    --display: 'Fraunces', serif;
+    --body: 'Manrope', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);
+    color:var(--black);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;left:0;right:0;
+    z-index:100;
+    background:rgba(199,50,8,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid rgba(0,0,0,0.18);
+  }
+  .nav-wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding:16px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .logo{display:flex; align-items:center;}
+  .logo img{height:74px; width:auto; display:block;}
+  nav.links{display:flex; gap:36px;}
+  nav.links a{
+    font-size:0.86rem;
+    font-weight:600;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.82);
+    position:relative;
+    padding:4px 0;
+    transition:color .25s ease;
+  }
+  nav.links a.active{color:var(--white);}
+  nav.links a::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:0;
+    width:0;height:2px;
+    background:var(--black);
+    transition:width .3s ease;
+  }
+  nav.links a:hover{color:var(--white);}
+  nav.links a:hover::after, nav.links a.active::after{width:100%;}
+  .nav-cta{
+    display:flex; align-items:center; gap:8px;
+    background:#25D366; color:var(--white);
+    font-size:0.82rem; font-weight:700;
+    padding:10px 20px; border-radius:2px; letter-spacing:0.03em;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .nav-cta:hover{background:#1eb85a; transform:translateY(-1px);}
+  .nav-cta svg{width:16px;height:16px;fill:var(--white);}
+
+  /* ---------- BREADCRUMB / HERO ---------- */
+  .course-hero{
+    position:relative;
+    min-height:56vh;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .course-hero-bg{
+    position:absolute; inset:0;
+    background-image:url(images/tocados-img.jpg);
+    background-size:cover;
+    background-position:center 30%;
+  }
+  .course-hero-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, var(--black) 5%, rgba(10,10,10,0.55) 45%, rgba(199,50,8,0.35) 100%);
+  }
+  .course-hero-content{
+    position:relative; z-index:1;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 32px 60px;
+    width:100%;
+  }
+  .breadcrumb{
+    display:flex; align-items:center; gap:8px;
+    font-size:0.8rem; font-weight:600;
+    color:rgba(255,255,255,0.7);
+    margin-bottom:22px;
+  }
+  .breadcrumb a{color:rgba(255,255,255,0.85);}
+  .breadcrumb a:hover{color:var(--white); text-decoration:underline;}
+  .course-tag-pill{
+    display:inline-block;
+    background:var(--bordo);
+    color:var(--white);
+    font-size:0.74rem;
+    font-weight:800;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:5px 14px;
+    border-radius:2px;
+    margin-bottom:18px;
+  }
+  h1.course-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.2rem, 5vw, 3.8rem);
+    line-height:1.05;
+    color:var(--white);
+    max-width:760px;
+    letter-spacing:-0.01em;
+  }
+  .course-hero-sub{
+    margin-top:20px;
+    max-width:600px;
+    color:rgba(255,255,255,0.85);
+    font-size:1.06rem;
+    line-height:1.65;
+    font-weight:500;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:90px 32px;}
+  .section-inner{max-width:1100px; margin:0 auto;}
+  .two-col{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:70px;
+    align-items:start;
+  }
+  .eyebrow{
+    display:flex; align-items:center; gap:12px;
+    font-size:0.78rem; font-weight:800; letter-spacing:0.18em;
+    text-transform:uppercase; color:var(--bordo);
+    margin-bottom:20px;
+  }
+  .eyebrow::before{content:''; width:32px; height:2px; background:var(--bordo);}
+  h2.section-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(1.8rem, 3.2vw, 2.6rem);
+    line-height:1.1;
+    letter-spacing:-0.01em;
+    margin-bottom:36px;
+  }
+
+  /* checklist */
+  .checklist{
+    display:grid;
+    gap:20px;
+  }
+  .checklist li{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    font-size:1.02rem;
+    font-weight:600;
+    line-height:1.5;
+    color:#1F1F1F;
+    padding:24px;
+    background:#F8E6E2;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:opacity .5s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .checklist li svg{
+    flex-shrink:0;
+    width:24px; height:24px;
+    stroke:#C9320B;
+    stroke-width:2.5;
+  }
+  .checklist li.reveal{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  .checklist li.reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (hover:hover){
+    .checklist li:hover{
+      transform:translateY(-3px);
+      box-shadow:0 14px 28px rgba(0,0,0,.12);
+    }
+  }
+
+  /* sidebar card */
+  .info-card{
+    background:var(--black);
+    color:var(--white);
+    padding:40px 34px;
+    border-radius:2px;
+    position:sticky;
+    top:110px;
+  }
+  .info-card h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.4rem;
+    margin-bottom:24px;
+  }
+  .info-row{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .info-row:last-of-type{margin-bottom:30px;}
+  .info-row svg{width:20px; height:20px; flex-shrink:0; stroke:#ff8a5c; margin-top:2px;}
+  .info-row-title{font-weight:700; font-size:0.92rem; margin-bottom:3px;}
+  .info-row-text{font-size:0.88rem; color:rgba(255,255,255,0.72); line-height:1.5;}
+  .btn-whatsapp{
+    background:#25D366; color:var(--white); font-weight:700; font-size:0.95rem;
+    padding:16px 24px; border-radius:2px;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width:100%;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .btn-whatsapp:hover{background:#1eb85a; transform:translateY(-2px);}
+  .btn-whatsapp svg{width:18px;height:18px;fill:var(--white);}
+
+  /* highlights strip */
+  .highlights{background:var(--bone);}
+  .highlights-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:0;
+  }
+  .highlight-card{
+    background:var(--white);
+    padding:36px 30px;
+  }
+  .highlight-icon{
+    width:44px; height:44px;
+    border-radius:50%;
+    background:rgba(199,50,8,0.08);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+  }
+  .highlight-icon svg{width:20px; height:20px; stroke:var(--bordo);}
+  .highlight-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.1rem;
+    margin-bottom:6px;
+  }
+  .highlight-text{
+    font-size:0.9rem;
+    color:#5a5a5a;
+    line-height:1.6;
+  }
+
+  /* gallery placeholder */
+  .gallery-note{
+    background:var(--bone);
+    border:1.5px dashed var(--line);
+    border-radius:2px;
+    padding:40px;
+    text-align:center;
+    color:#8a8a8a;
+    font-size:0.92rem;
+  }
+  .course-gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+  }
+  .course-gallery-grid img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:2px;
+    transition:transform .3s ease;
+  }
+  .course-gallery-grid a{overflow:hidden; display:block; border-radius:2px;}
+  .course-gallery-grid a:hover img{transform:scale(1.06);}
+
+  /* footer CTA */
+  .footer-cta{
+    background:var(--black);
+    color:var(--white);
+    padding:100px 32px 60px;
+  }
+  .fc-top{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:40px;
+    padding-bottom:60px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .fc-top h2{
+    font-family:var(--display); font-weight:600;
+    font-size:clamp(1.8rem, 3.6vw, 3rem);
+    max-width:560px; line-height:1.1;
+  }
+  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500;}
+  .fc-top .btn-whatsapp{width:auto; padding:16px 30px;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;
+    padding-top:50px;
+  }
+  .footer-col h4{
+    font-size:0.76rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--bordo); margin-bottom:18px;
+  }
+  .footer-col p, .footer-col a{
+    font-size:0.92rem; color:rgba(255,255,255,0.82); line-height:1.8; display:block;
+  }
+  .footer-col a:hover{color:var(--bordo);}
+  .footer-bottom{
+    margin-top:60px; padding-top:26px; border-top:1px solid rgba(255,255,255,0.12);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:0.78rem; color:rgba(255,255,255,0.45);
+  }
+
+  .wa-bubble{
+    position:fixed; bottom:26px; right:26px; z-index:200;
+    width:60px; height:60px; background:#25D366; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+    transition:transform .25s ease;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  .wa-bubble:hover{transform:scale(1.08);}
+  .wa-bubble svg{width:30px;height:30px;fill:var(--white);}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 8px 24px rgba(0,0,0,0.35), 0 0 0 0 rgba(37,211,102,0.5);}
+    50%{box-shadow:0 8px 24px rgba(0,0,0,0.35), 0 0 0 10px rgba(37,211,102,0);}
+  }
+
+  @media (max-width: 980px){
+    nav.links{display:none;}
+    .nav-cta{display:none;}
+    .two-col{grid-template-columns:1fr;}
+    .info-card{position:static;}
+    .highlights-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .course-gallery-grid{grid-template-columns:repeat(3, 1fr);}
+  }
+  @media (max-width: 640px){
+    section{padding:64px 28px;}
+    .nav-wrap{padding:12px 16px;}
+    .logo img{height:66px;}
+    .nav-cta{padding:8px 12px; font-size:0.72rem; gap:5px;}
+    .nav-cta svg{width:13px;height:13px;}
+    .course-hero-content{padding:0 20px 44px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .fc-top{flex-direction:column; align-items:flex-start;}
+    .course-gallery-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  /* ---------- MOBILE HAMBURGER MENU ---------- */
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px;height:34px;
+    background:none;border:none;
+    cursor:pointer;
+    z-index:210;
+    padding:0;
+  }
+  .hamburger span{
+    display:block;
+    width:100%;height:2px;
+    background:var(--white);
+    border-radius:2px;
+    transition:transform .25s ease, opacity .2s ease;
+  }
+  body.menu-open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  body.menu-open .hamburger span:nth-child(2){opacity:0;}
+  body.menu-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-nav{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg, var(--bordo) 0%, var(--bordo-dark) 100%);
+    z-index:200;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:32px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-12px);
+    transition:opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+  }
+  body.menu-open .mobile-nav{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+    transition:opacity .25s ease, transform .25s ease, visibility 0s linear 0s;
+  }
+  .mobile-nav a{
+    font-family:var(--display);
+    font-size:1.6rem;
+    color:var(--white);
+    text-decoration:none;
+    font-weight:500;
+  }
+  .mobile-nav a.mobile-cta{
+    margin-top:12px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#25D366;
+    color:var(--white);
+    font-family:var(--body);
+    font-weight:700;
+    font-size:1rem;
+    padding:14px 26px;
+    border-radius:999px;
+  }
+  .mobile-nav a.mobile-cta svg{width:18px;height:18px;fill:var(--white);}
+  body.menu-open{overflow:hidden;}
+
+  @media (max-width: 980px){
+    .hamburger{display:flex;}
+  }
+
+</style>
+</head>
+<body data-cms-page="tocados">
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><img src="images/logo-white-v2.png" alt="IPPECG"></a>
+    <button class="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="peluqueria.html">Peluquería</a>
+      <a href="estetica.html">Estética</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/5491132068482" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
+      Contacto
+    </a>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <a href="index.html">Inicio</a>
+      <a href="peluqueria.html">Peluquería</a>
+      <a href="estetica.html">Estética</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="contacto.html">Contacto</a>
+</div>
+
+
+<section class="course-hero">
+  <div class="course-hero-bg" data-cms-bg="hero_image"></div>
+  <div class="course-hero-overlay"></div>
+  <div class="course-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="peluqueria.html">Cursos</a> / Tocados artesanales
+    </div>
+    <span class="course-tag-pill">Profesional</span>
+    <h1 class="course-title"><span data-cms="title">Curso de Tocados Artesanales 🌸</span></h1>
+    <p class="course-hero-sub"><span data-cms="subtitle">Tocados artesanales diseñados para novias, quinceañeras, madrinas y todo tipo de eventos sociales. Aprendé a diseñar y armar piezas únicas, a medida de cada peinado y cada ocasión.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner two-col">
+    <div>
+      <div class="eyebrow">Plan de estudios</div>
+      <h2 class="section-title">¿Qué vas a aprender?</h2>
+      <ul class="checklist" data-cms-list="checklist" data-cms-list-type="checklist">
+        <li class="reveal" style="transition-delay:0.0s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Diseño y armado de bases para tocados
+        </li>
+        <li class="reveal" style="transition-delay:0.06s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Uso de flores artificiales, tul, plumas y pedrería
+        </li>
+        <li class="reveal" style="transition-delay:0.12s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Tocados para novias
+        </li>
+        <li class="reveal" style="transition-delay:0.18s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Tocados para quinceañeras y fiestas de 15
+        </li>
+        <li class="reveal" style="transition-delay:0.24s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Tocados para madrinas e invitadas
+        </li>
+        <li class="reveal" style="transition-delay:0.3s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Técnicas de fijación y adaptación al peinado
+        </li>
+        <li class="reveal" style="transition-delay:0.36s">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Tendencias y personalización según el evento
+        </li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>Datos del curso</h3>
+      <div class="info-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <div>
+          <div class="info-row-title">Duración</div>
+          <div class="info-row-text"><span data-cms="duration">2 meses</span></div>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+        <div>
+          <div class="info-row-title">Modalidad</div>
+          <div class="info-row-text"><span data-cms="modality">Clases teórico-prácticas con armado de tocados propios</span></div>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+        <div>
+          <div class="info-row-title">Certificación</div>
+          <div class="info-row-text"><span data-cms="certification">Diploma y carnet profesional al finalizar</span></div>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+        <div>
+          <div class="info-row-title">Material incluido</div>
+          <div class="info-row-text"><span data-cms="material">Grupo de WhatsApp, guía de materiales y clases grabadas</span></div>
+        </div>
+      </div>
+      <a class="btn-whatsapp" href="https://wa.me/5491132068482?text=Hola!%20Quiero%20consultar%20por%20el%20curso%20de%20Tocados%20Artesanales" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
+        Consultar por este curso
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="section-inner">
+    <div class="eyebrow">Por qué elegir este curso</div>
+    <h2 class="section-title">Formación completa, de la teoría a la práctica real.</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+        </div>
+        <div class="highlight-title">Práctica con materiales reales</div>
+        <div class="highlight-text">Armás tus propios tocados desde la primera clase, con flores, tul, plumas y pedrería profesional.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+        </div>
+        <div class="highlight-title">Diploma y carnet profesional</div>
+        <div class="highlight-text">Al finalizar el curso recibís tu diploma y carnet, con los que podés empezar a trabajar de forma profesional.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+        </div>
+        <div class="highlight-title">Acompañamiento constante</div>
+        <div class="highlight-text">Grupo de WhatsApp del curso, guía de materiales y clases grabadas para repasar cuando lo necesites.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="eyebrow">Trabajos de alumnas</div>
+    <h2 class="section-title">Así se ve el curso en acción.</h2>
+    <div class="course-gallery-grid" data-cms-list="gallery">
+      <a href="#"><img src="images/tocados-img-2.jpg" alt="Tocado artesanal IPPECG 1"></a>
+      <a href="#"><img src="images/tocados-img-3.jpg" alt="Tocado artesanal IPPECG 2"></a>
+      <a href="#"><img src="images/tocados-img-4.jpg" alt="Tocado artesanal IPPECG 3"></a>
+      <a href="#"><img src="images/tocados-img-5.jpg" alt="Tocado artesanal IPPECG 4"></a>
+      <a href="#"><img src="images/tocados-img-6.jpg" alt="Tocado artesanal IPPECG 5"></a>
+      <a href="#"><img src="images/tocados-img-7.jpg" alt="Tocado artesanal IPPECG 6"></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-cta" id="contacto">
+  <div class="section-inner">
+    <div class="fc-top">
+      <h2>¿Listo para empezar tu <em>formación profesional</em>?</h2>
+      <a class="btn-whatsapp" href="https://wa.me/5491132068482?text=Hola!%20Quiero%20consultar%20por%20el%20curso%20de%20Tocados%20Artesanales" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>IPPECG</h4>
+        <p>Instituto Profesional de Peluquería y Estética Carina González. Formación con certificación, práctica real y acompañamiento personalizado.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sedes</h4>
+        <p>Bernal Oeste<br><span>Calle 195 n° 1000</span></p>
+        <p style="margin-top:10px;">Glew<br><span>Manuela Pedraza 2046</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491132068482" target="_blank" rel="noopener">WhatsApp: <span>11-3206-8482</span></a>
+        <a href="mailto:institutoprof.carinagonzalez@gmail.com"><span>institutoprof.carinagonzalez@gmail.com</span></a>
+        <p style="margin-top:10px;">Martes a sábados de 10 a 18hs</p>
+      </div>
+      <div class="footer-col">
+        <h4>Redes</h4>
+        <a href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener">Instagram <span>@ippe.carinagonzalez</span></a>
+        <a href="https://www.facebook.com/CarinaGonzalezInstitutoProfesionalDePeluqueria/?locale=es_LA" target="_blank" rel="noopener">Facebook IPPECG</a>
+        <a href="https://www.tiktok.com/@ippe.cg" target="_blank" rel="noopener">TikTok <span>@ippe.cg</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IPPECG — Instituto Profesional de Peluquería y Estética Carina González</span>
+      <span>Sitio web realizado con ♥ por <a href="https://maywebstudio.online" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">May Web Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-bubble" href="https://wa.me/5491132068482" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+
+<script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var body = document.body;
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    body.classList.toggle('menu-open');
+  });
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      body.classList.remove('menu-open');
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!els.length || !('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('is-visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.2});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script src="cms-loader.js"></script>
+</body>
+</html>

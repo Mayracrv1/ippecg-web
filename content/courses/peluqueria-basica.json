@@ -1,0 +1,40 @@
+{
+  "title": "Curso de Peluquería Básica ✂️",
+  "subtitle": "La base de todo peluquero profesional: cortes, lavado, secado, brushing y las técnicas fundamentales para empezar a trabajar con seguridad desde el primer día.",
+  "hero_image": "images/peluqueria-basica-img.jpg",
+  "duration": "3 meses",
+  "modality": "Clases teóricas y prácticas sobre modelos reales",
+  "certification": "Diploma y carnet profesional al finalizar",
+  "material": "Grupo de WhatsApp, guía teórica y clases grabadas",
+  "checklist": [
+    "Lavado y diagnóstico capilar",
+    "Cortes básicos de dama y caballero",
+    "Secado y brushing profesional",
+    "Uso de planchita y tenaza",
+    "Peinados y recogidos sencillos",
+    "Nociones básicas de coloración",
+    "Atención al cliente y organización del puesto de trabajo"
+  ],
+  "gallery": [
+    {
+      "image": "images/peluqueria-basica-img-2.jpg",
+      "alt": "Trabajo de peluquería básica alumnas IPPECG 1"
+    },
+    {
+      "image": "images/peluqueria-basica-img-3.jpg",
+      "alt": "Trabajo de peluquería básica alumnas IPPECG 2"
+    },
+    {
+      "image": "images/peluqueria-basica-img-4.jpg",
+      "alt": "Trabajo de peluquería básica alumnas IPPECG 3"
+    },
+    {
+      "image": "images/peluqueria-basica-img-5.jpg",
+      "alt": "Trabajo de peluquería básica alumnas IPPECG 4"
+    },
+    {
+      "image": "images/peluqueria-basica-img-6.jpg",
+      "alt": "Trabajo de peluquería básica alumnas IPPECG 5"
+    }
+  ]
+}

@@ -148,9 +148,7 @@ collections:
         fields:
           - {label: "Texto pequeño arriba del título (sedes / inscripciones)", name: "hero_eyebrow", widget: "string"}
           - {label: "Bajada debajo del título principal", name: "hero_sub", widget: "text"}
-          - {label: "Foto de fondo 1 (carrusel del inicio)", name: "hero_image_1", widget: "image"}
-          - {label: "Foto de fondo 2 (carrusel del inicio)", name: "hero_image_2", widget: "image"}
-          - {label: "Foto de fondo 3 (carrusel del inicio)", name: "hero_image_3", widget: "image"}
+          - {label: "Foto de fondo del hero (portada principal)", name: "hero_image_1", widget: "image"}
           - {label: "Texto de 'Quiénes somos' (resumen en el inicio)", name: "about_text", widget: "text"}
           - label: "Estadísticas (los 4 números destacados)"
             name: "stats"

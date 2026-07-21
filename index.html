@@ -54,7 +54,7 @@
   .nav-wrap{
     max-width:1280px;
     margin:0 auto;
-    padding:16px 32px;
+    padding:14px 32px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -64,7 +64,7 @@
     align-items:center;
   }
   .logo img{
-    height:74px;
+    height:52px;
     width:auto;
     display:block;
   }
@@ -147,11 +147,15 @@
     36%{opacity:0;}
     100%{opacity:0;}
   }
+  .hero-slide-single{
+    opacity:1 !important;
+    animation:none !important;
+  }
   .hero-overlay{
     position:absolute;
     inset:0;
     background:
-      linear-gradient(0deg, var(--black) 0%, rgba(10,10,10,0.55) 38%, rgba(78,14,16,0.35) 65%, rgba(199,50,8,0.25) 100%);
+      linear-gradient(0deg, rgba(5,5,5,0.92) 0%, rgba(10,10,10,0.72) 35%, rgba(40,12,12,0.55) 65%, rgba(60,18,15,0.55) 100%);
   }
   .hero-content{
     position:relative;
@@ -193,7 +197,7 @@
     background:linear-gradient(180deg, transparent 62%, rgba(199,50,8,0.55) 62%);
   }
   .hero-sub{
-    margin-top:26px;
+    margin-top:24px;
     max-width:520px;
     color:rgba(255,255,255,0.88);
     font-size:1.08rem;
@@ -203,7 +207,7 @@
     animation:fadeUp .9s ease forwards .4s;
   }
   .hero-actions{
-    margin-top:38px;
+    margin-top:32px;
     display:flex;
     gap:16px;
     flex-wrap:wrap;
@@ -280,36 +284,45 @@
     50%{transform:scaleY(0.5); opacity:1;}
   }
 
-  /* ---------- PROMO STRIP ---------- */
-  .promo{
+  /* ---------- CREDIBILITY STRIP ---------- */
+  .credibility{
     background:var(--black);
     color:var(--white);
-    padding:16px 32px;
-    text-align:center;
-    font-size:0.92rem;
-    font-weight:600;
-    letter-spacing:0.01em;
-    position:relative;
-    overflow:hidden;
+    padding:36px 32px;
   }
-  .promo strong{color:var(--bordo);}
-  .promo-inner{
+  .credibility-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:28px;
+  }
+  .credibility-item{
     display:flex;
     align-items:center;
-    justify-content:center;
     gap:14px;
-    flex-wrap:wrap;
-    max-width:1000px;
-    margin:0 auto;
   }
-  .promo-tag{
-    background:var(--bordo);
-    padding:4px 12px;
-    border-radius:2px;
-    font-size:0.72rem;
-    font-weight:800;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
+  .credibility-item svg{
+    flex-shrink:0;
+    width:30px;height:30px;
+    stroke:var(--bordo);
+  }
+  .credibility-num{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--white);
+    line-height:1.2;
+  }
+  .credibility-label{
+    font-size:0.8rem;
+    color:rgba(255,255,255,0.65);
+    margin-top:2px;
+  }
+  @media (max-width:900px){
+    .credibility-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:640px){
+    .credibility{padding:28px 20px;}
+    .credibility-grid{grid-template-columns:1fr; gap:20px;}
   }
 
   /* ---------- SECTION SHARED ---------- */
@@ -834,6 +847,7 @@
     .nav-cta{padding:8px 12px; font-size:0.72rem; gap:5px;}
     .nav-cta svg{width:13px;height:13px;}
     .hero-content{padding:90px 20px 70px;}
+    h1.hero-title{font-size:clamp(2rem, 8.5vw, 2.6rem);}
     .courses-grid{grid-template-columns:1fr;}
     .distribuidora-carousel{margin-top:36px;}
     .distribuidora-track img{width:150px; height:150px;}
@@ -955,15 +969,13 @@
 
 <section class="hero" id="inicio">
   <div class="hero-bg">
-    <div class="hero-slide" data-cms-bg="hero_image_1" style="background-image:url(images/index-img.jpg)"></div>
-    <div class="hero-slide" data-cms-bg="hero_image_2" style="background-image:url(images/index-img-2.jpg)"></div>
-    <div class="hero-slide" data-cms-bg="hero_image_3" style="background-image:url(images/index-img-3.jpg)"></div>
+    <div class="hero-slide hero-slide-single" data-cms-bg="hero_image_1" style="background-image:url(images/hero-salon.jpg)"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="dot"></span> <span data-cms="hero_eyebrow">Bernal Oeste &amp; Glew · Inscripciones abiertas todo el año</span></div>
+    <div class="hero-eyebrow"><span class="dot"></span> <span data-cms="hero_eyebrow">📍 Bernal Oeste · Glew • Inscripciones abiertas todo el año</span></div>
     <h1 class="hero-title">Aprendé el oficio<br>que <em>transforma</em> tu futuro.</h1>
-    <p class="hero-sub" data-cms="hero_sub">Formación profesional en peluquería, barbería y estética con acompañamiento personalizado, práctica real desde el primer día y certificación al finalizar cada curso.</p>
+    <p class="hero-sub" data-cms="hero_sub">Formación profesional en peluquería, barbería y estética con práctica real desde el primer día y certificación al finalizar cada curso.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="peluqueria.html">Ver cursos
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -976,12 +988,40 @@
   <div class="hero-scroll">Scroll</div>
 </section>
 
-<div class="promo">
-  <div class="promo-inner">
-    <span class="promo-tag">Promo</span>
-    <span>Hasta el <strong>15 de julio</strong>, te regalamos la remera del instituto al inscribirte en Peluquería básica, Maquillaje profesional, Barbería inicial o Manicuría profesional.</span>
+<section class="credibility">
+  <div class="section-inner">
+    <div class="credibility-grid">
+      <div class="credibility-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+        <div>
+          <div class="credibility-num">+8 años</div>
+          <div class="credibility-label">formando profesionales</div>
+        </div>
+      </div>
+      <div class="credibility-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6-6 6 6M6 9v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/></svg>
+        <div>
+          <div class="credibility-num">Práctica real</div>
+          <div class="credibility-label">desde el primer día</div>
+        </div>
+      </div>
+      <div class="credibility-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+        <div>
+          <div class="credibility-num">Certificación</div>
+          <div class="credibility-label">al finalizar cada curso</div>
+        </div>
+      </div>
+      <div class="credibility-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+        <div>
+          <div class="credibility-num">Docentes</div>
+          <div class="credibility-label">con experiencia real</div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <div class="checker-rule"></div>
 

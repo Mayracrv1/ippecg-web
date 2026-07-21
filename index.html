@@ -1409,33 +1409,32 @@
 <script src="cms-loader.js"></script>
 <script>
 (function(){
-  function autoScroll(id, speed){
+  function autoScrollStep(id, intervalMs){
     var track = document.getElementById(id);
     if(!track) return;
     var paused = false;
-    var rafId = null;
-    function step(){
-      if(!paused){
-        var maxScroll = track.scrollWidth - track.clientWidth;
-        if(maxScroll > 0){
-          if(track.scrollLeft >= maxScroll - 1){
-            track.scrollLeft = 0;
-          } else {
-            track.scrollLeft += speed;
-          }
-        }
+    function next(){
+      if(paused) return;
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      if(maxScroll <= 2) return;
+      var firstChild = track.children[0];
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 16);
+      var step = firstChild ? firstChild.getBoundingClientRect().width + gap : 280;
+      if(track.scrollLeft >= maxScroll - 2){
+        track.scrollTo({left:0, behavior:'smooth'});
+      } else {
+        track.scrollBy({left:step, behavior:'smooth'});
       }
-      rafId = requestAnimationFrame(step);
     }
     track.addEventListener('mouseenter', function(){ paused = true; });
     track.addEventListener('mouseleave', function(){ paused = false; });
     track.addEventListener('touchstart', function(){ paused = true; }, {passive:true});
     track.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 2500); }, {passive:true});
-    rafId = requestAnimationFrame(step);
+    setInterval(next, intervalMs);
   }
-  autoScroll('jornadaTrack', 0.6);
-  autoScroll('distTrack', 0.6);
-  autoScroll('testiTrack', 0.6);
+  autoScrollStep('jornadaTrack', 1500);
+  autoScrollStep('distTrack', 1500);
+  autoScrollStep('testiTrack', 1500);
 })();
 </script>
 <script>

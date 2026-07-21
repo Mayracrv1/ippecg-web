@@ -155,7 +155,7 @@
     position:absolute;
     inset:0;
     background:
-      linear-gradient(0deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.88) 30%, rgba(0,0,0,0.72) 55%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.4) 100%);
+      linear-gradient(0deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.93) 30%, rgba(0,0,0,0.82) 55%, rgba(0,0,0,0.68) 80%, rgba(0,0,0,0.52) 100%);
   }
   .hero-content{
     position:relative;
@@ -643,13 +643,19 @@
   .testi-name{font-weight:700; font-size:0.88rem;}
   .testi-course{font-size:0.78rem; color:#8a8a8a;}
   .testi-photos{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    display:flex;
     gap:20px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
     margin-top:56px;
+    padding-bottom:4px;
   }
+  .testi-photos::-webkit-scrollbar{display:none;}
   .testi-photos .testi-photo-wrap{
-    width:100%;
+    width:360px;
+    flex-shrink:0;
+    scroll-snap-align:start;
     aspect-ratio:4/5;
     background:var(--bone);
     border:1px solid var(--line);
@@ -780,8 +786,8 @@
   }
   .distribuidora-track::-webkit-scrollbar{display:none;}
   .distribuidora-track img{
-    width:240px;
-    height:240px;
+    width:280px;
+    height:280px;
     object-fit:cover;
     border-radius:2px;
     border:1px solid var(--line);
@@ -793,12 +799,13 @@
     justify-content:center;
     gap:10px;
     margin-top:18px;
+    margin-bottom:8px;
   }
   .distribuidora-nav button{
     width:38px;height:38px;
     border-radius:50%;
     border:1.5px solid var(--black);
-    background:var(--white);
+    background:var(--black);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -807,7 +814,7 @@
   }
   .distribuidora-nav button:hover{background:var(--bordo); border-color:var(--bordo);}
   .distribuidora-nav button:hover svg{stroke:var(--white);}
-  .distribuidora-nav button svg{width:16px;height:16px; stroke:var(--black); transition:stroke .2s ease;}
+  .distribuidora-nav button svg{width:16px;height:16px; stroke:var(--white); transition:stroke .2s ease;}
 
   /* ---------- FOOTER CTA ---------- */
   .footer-cta{
@@ -895,7 +902,7 @@
     .about-visual{order:-1; aspect-ratio:16/10;}
     .courses-grid{grid-template-columns:1fr 1fr;}
     .testi-grid{grid-template-columns:1fr;}
-    .testi-photos{grid-template-columns:repeat(2, 1fr);}
+    .testi-photos .testi-photo-wrap{width:220px;}
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media (max-width: 640px){
@@ -905,11 +912,13 @@
     .nav-cta{padding:8px 12px; font-size:0.72rem; gap:5px;}
     .nav-cta svg{width:13px;height:13px;}
     .hero{min-height:78vh;}
+    .workshops{padding:48px 24px;}
     .hero-content{padding:90px 20px 70px;}
     h1.hero-title{font-size:clamp(2rem, 8.5vw, 2.6rem);}
+    .testi-photos .testi-photo-wrap{width:260px;}
     .courses-grid{grid-template-columns:1fr;}
     .distribuidora-carousel{margin-top:36px;}
-    .distribuidora-track img{width:180px; height:180px;}
+    .distribuidora-track img{width:230px; height:230px;}
     .footer-grid{grid-template-columns:1fr;}
     .fc-top{flex-direction:column; align-items:flex-start;}
     .hero-scroll{display:none;}
@@ -1032,7 +1041,7 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="dot"></span> <span data-cms="hero_eyebrow">📍 Bernal Oeste · Glew • Inscripciones abiertas todo el año</span></div>
+    <div class="hero-eyebrow"><span data-cms="hero_eyebrow">📍 Bernal Oeste · Glew · Inscripciones abiertas todo el año</span></div>
     <h1 class="hero-title">Aprendé el oficio<br>que <em>transforma</em> tu futuro.</h1>
     <p class="hero-sub" data-cms="hero_sub">Formación profesional en peluquería, barbería y estética con práctica real desde el primer día y certificación al finalizar cada curso.</p>
     <div class="hero-actions">
@@ -1274,13 +1283,21 @@
   <div class="section-inner">
     <div class="eyebrow">Egresados</div>
     <h2 class="section-title">Lo que dicen quienes ya pasaron por el instituto.</h2>
-    <div class="testi-photos" data-cms-list="testimonios_images" data-cms-list-type="testi">
+    <div class="testi-photos" id="testiTrack" data-cms-list="testimonios_images" data-cms-list-type="testi">
       <div class="testi-photo-wrap reveal"><img src="images/index-img-35.jpg" alt="Testimonio de alumno IPPECG 1"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.08s"><img src="images/index-img-36.jpg" alt="Testimonio de alumno IPPECG 2"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.16s"><img src="images/index-img-37.jpg" alt="Testimonio de alumno IPPECG 3"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.24s"><img src="images/index-img-38.jpg" alt="Testimonio de alumno IPPECG 4"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.32s"><img src="images/index-img-39.jpg" alt="Testimonio de alumno IPPECG 5"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.4s"><img src="images/index-img-40.jpg" alt="Testimonio de alumno IPPECG 6"></div>
+    </div>
+    <div class="distribuidora-nav">
+      <button type="button" aria-label="Anterior" onclick="document.getElementById('testiTrack').scrollBy({left:-380,behavior:'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" aria-label="Siguiente" onclick="document.getElementById('testiTrack').scrollBy({left:380,behavior:'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -1418,6 +1435,7 @@
   }
   autoScroll('jornadaTrack', 0.6);
   autoScroll('distTrack', 0.6);
+  autoScroll('testiTrack', 0.6);
 })();
 </script>
 <script>

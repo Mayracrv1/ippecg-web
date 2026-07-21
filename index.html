@@ -676,7 +676,7 @@
   .instagram-cta{
     background:var(--bone);
     text-align:center;
-    padding:100px 32px;
+    padding:56px 32px 110px;
   }
   .instagram-cta-card{
     display:inline-flex;
@@ -684,25 +684,27 @@
     align-items:center;
     text-decoration:none;
     color:var(--black);
-    max-width:320px;
+    max-width:360px;
     margin:0 auto;
   }
   .instagram-cta-photo{
-    width:200px;height:200px;
-    border-radius:50%;
+    width:100%;
+    max-width:340px;
+    aspect-ratio:9/10;
+    border-radius:12px;
     background-size:cover;
-    background-position:center;
+    background-position:top center;
     position:relative;
     margin-bottom:24px;
-    border:4px solid var(--white);
+    border:1px solid var(--line);
     box-shadow:0 8px 24px rgba(0,0,0,0.12);
     transition:transform .3s ease;
   }
-  .instagram-cta-card:hover .instagram-cta-photo{transform:scale(1.05);}
+  .instagram-cta-card:hover .instagram-cta-photo{transform:scale(1.02);}
   .instagram-cta-badge{
     position:absolute;
-    bottom:6px;right:6px;
-    width:44px;height:44px;
+    bottom:14px;right:14px;
+    width:46px;height:46px;
     border-radius:50%;
     background:linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
     display:flex;align-items:center;justify-content:center;
@@ -727,8 +729,8 @@
     font-size:0.95rem;
   }
   @media (max-width:640px){
-    .instagram-cta{padding:64px 24px;}
-    .instagram-cta-photo{width:160px;height:160px;}
+    .instagram-cta{padding:40px 24px 70px;}
+    .instagram-cta-photo{max-width:280px;}
   }
 
   .lightbox{
@@ -1100,7 +1102,7 @@
 
 <section class="hero" id="inicio">
   <div class="hero-bg">
-    <div class="hero-slide hero-slide-single" data-cms-bg="hero_image_1" style="background-image:url(images/hero-salon.jpg)"></div>
+    <div class="hero-slide hero-slide-single" data-cms-bg="hero_image_1" style="background-image:url(images/instagram-profile.jpg)"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -1355,7 +1357,7 @@
 <section class="instagram-cta">
   <div class="section-inner">
     <a class="instagram-cta-card" href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">
-      <div class="instagram-cta-photo" style="background-image:url(images/index-img-36.jpg)">
+      <div class="instagram-cta-photo" style="background-image:url(images/hero-salon.jpg)">
         <span class="instagram-cta-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </span>

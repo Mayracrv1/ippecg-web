@@ -215,7 +215,7 @@
     animation:fadeUp .9s ease forwards .55s;
   }
   .btn-primary{
-    background:var(--black);
+    background:var(--bordo);
     color:var(--white);
     font-weight:700;
     font-size:0.95rem;
@@ -227,7 +227,7 @@
     letter-spacing:0.01em;
     transition:background .25s ease, transform .25s ease;
   }
-  .btn-primary:hover{background:#252525; transform:translateY(-2px);}
+  .btn-primary:hover{background:var(--bordo-dark); transform:translateY(-2px);}
   .btn-ghost{
     border:1.5px solid rgba(255,255,255,0.55);
     color:var(--white);
@@ -313,7 +313,7 @@
   .credibility-item svg{
     flex-shrink:0;
     width:24px;height:24px;
-    stroke:var(--bordo);
+    stroke:white;
   }
   .credibility-item.reveal{
     opacity:0;
@@ -416,7 +416,11 @@
     background-size:cover;
     background-position:center;
     overflow:hidden;
+    transition:background-size .4s ease, opacity .6s ease, transform .6s ease;
   }
+  .course-card:hover{background-size:112%;}
+  .course-card.reveal{opacity:0; transform:translateY(24px);}
+  .course-card.reveal.is-visible{opacity:1; transform:translateY(0);}
   .course-card::before{
     content:'';
     position:absolute;
@@ -462,7 +466,7 @@
   .course-foot{
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:flex-end;
     margin-top:24px;
   }
   .course-tag{
@@ -1104,58 +1108,52 @@
 
     </div>
     <div class="courses-grid">
-      <a class="course-card" href="peluqueria-basica.html" style="background-image:url(images/index-img-5.jpg)">
+      <a class="course-card reveal" href="peluqueria-basica.html" style="background-image:url(images/index-img-5.jpg); transition-delay:0s">
         <div>
           <div class="course-name">Peluquería básica</div>
         </div>
         <div class="course-foot">
-          <span class="course-tag">Peluquería</span>
           <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
         </div>
       </a>
-      <a class="course-card" href="barberia.html" style="background-image:url(images/index-img-6.jpg)">
+      <a class="course-card reveal" href="barberia.html" style="background-image:url(images/index-img-6.jpg); transition-delay:0.08s">
         <div>
           <div class="course-name">Barbería inicial</div>
         </div>
         <div class="course-foot">
-          <span class="course-tag">Peluquería</span>
           <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
         </div>
       </a>
-      <a class="course-card" href="maquillaje.html" style="background-image:url(images/index-img-7.jpg)">
+      <a class="course-card reveal" href="maquillaje.html" style="background-image:url(images/index-img-7.jpg); transition-delay:0.16s">
         <div>
           <div class="course-name">Maquillaje profesional</div>
         </div>
         <div class="course-foot">
-          <span class="course-tag">Estética</span>
           <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
         </div>
       </a>
-      <a class="course-card" href="manicuria.html" style="background-image:url(images/index-img-8.jpg)">
+      <a class="course-card reveal" href="manicuria.html" style="background-image:url(images/index-img-8.jpg); transition-delay:0.24s">
         <div>
           <div class="course-name">Manicuría profesional</div>
         </div>
         <div class="course-foot">
-          <span class="course-tag">Estética</span>
           <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
         </div>
       </a>
-      <a class="course-card new" href="tocados.html" style="background-image:url(images/index-img-9.jpg)">
+      <a class="course-card new reveal" href="tocados.html" style="background-image:url(images/index-img-9.jpg); transition-delay:0.32s">
         <div class="course-num">Nuevo</div>
         <div>
           <div class="course-name">Tocados artesanales</div>
         </div>
         <div class="course-foot">
-          <span class="course-tag">Peluquería</span>
           <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
         </div>
       </a>
-      <a class="course-card" href="colorimetria.html" style="background-image:url(images/index-img-10.jpg)">
+      <a class="course-card reveal" href="colorimetria.html" style="background-image:url(images/index-img-10.jpg); transition-delay:0.4s">
         <div>
           <div class="course-name">Colorimetría, cortes, mechas y más</div>
         </div>
         <div class="course-foot">
-          <span class="course-tag">Peluquería</span>
           <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
         </div>
       </a>
@@ -1425,9 +1423,9 @@
     track.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 2500); }, {passive:true});
     setInterval(next, intervalMs);
   }
-  autoScrollStep('jornadaTrack', 1500);
+  autoScrollStep('jornadaTrack', 2000);
   autoScrollStep('distTrack', 1500);
-  autoScrollStep('testiTrack', 1500);
+  autoScrollStep('testiTrack', 2500);
 })();
 </script>
 <script>

@@ -155,7 +155,7 @@
     position:absolute;
     inset:0;
     background:
-      linear-gradient(0deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.93) 30%, rgba(0,0,0,0.82) 55%, rgba(0,0,0,0.68) 80%, rgba(0,0,0,0.52) 100%);
+      linear-gradient(0deg, rgba(0,0,0,0.99) 0%, rgba(0,0,0,0.96) 30%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0.65) 100%);
   }
   .hero-content{
     position:relative;
@@ -307,8 +307,8 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg, rgba(255,90,50,0.35) 0%, rgba(199,50,8,0.65) 100%);
-    border:1px solid rgba(255,90,50,0.25);
+    background:var(--bordo);
+    border:1px solid rgba(255,255,255,0.15);
   }
   .credibility-item svg{
     flex-shrink:0;
@@ -672,6 +672,65 @@
     cursor:pointer;
   }
   .testi-photos .testi-photo-wrap:hover{transform:scale(1.03);}
+  /* ---------- INSTAGRAM CTA ---------- */
+  .instagram-cta{
+    background:var(--bone);
+    text-align:center;
+    padding:100px 32px;
+  }
+  .instagram-cta-card{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+    color:var(--black);
+    max-width:320px;
+    margin:0 auto;
+  }
+  .instagram-cta-photo{
+    width:200px;height:200px;
+    border-radius:50%;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    margin-bottom:24px;
+    border:4px solid var(--white);
+    box-shadow:0 8px 24px rgba(0,0,0,0.12);
+    transition:transform .3s ease;
+  }
+  .instagram-cta-card:hover .instagram-cta-photo{transform:scale(1.05);}
+  .instagram-cta-badge{
+    position:absolute;
+    bottom:6px;right:6px;
+    width:44px;height:44px;
+    border-radius:50%;
+    background:linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    display:flex;align-items:center;justify-content:center;
+    border:3px solid var(--white);
+  }
+  .instagram-cta-badge svg{width:22px;height:22px;}
+  .instagram-cta-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.4rem;
+    color:var(--black);
+  }
+  .instagram-cta-handle{
+    color:var(--bordo);
+    font-weight:700;
+    margin-top:4px;
+    font-size:0.95rem;
+  }
+  .instagram-cta-text{
+    margin-top:10px;
+    color:#5a5a5a;
+    font-size:0.95rem;
+  }
+  @media (max-width:640px){
+    .instagram-cta{padding:64px 24px;}
+    .instagram-cta-photo{width:160px;height:160px;}
+  }
+
   .lightbox{
     position:fixed;
     inset:0;
@@ -1290,6 +1349,21 @@
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
+  </div>
+</section>
+
+<section class="instagram-cta">
+  <div class="section-inner">
+    <a class="instagram-cta-card" href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">
+      <div class="instagram-cta-photo" style="background-image:url(images/index-img-36.jpg)">
+        <span class="instagram-cta-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </span>
+      </div>
+      <div class="instagram-cta-title">Seguinos en Instagram</div>
+      <div class="instagram-cta-handle" data-cms-global="instagram_handle">@ippe.carinagonzalez</div>
+      <p class="instagram-cta-text">Seguinos en IG y enterate de todas las novedades ✨</p>
+    </a>
   </div>
 </section>
 

@@ -42,10 +42,11 @@
 
       if (type === "checklist") {
         el.innerHTML = list
-          .map(function (item) {
+          .map(function (item, i) {
             return (
-              '<li class="is-visible">' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+              '<li class="reveal" style="transition-delay:' +
+              (i * 0.06).toFixed(2) +
+              's"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
               escapeHtml(item) +
               "</li>"
             );
@@ -61,9 +62,11 @@
           .join("");
       } else if (type === "testi") {
         el.innerHTML = list
-          .map(function (g) {
+          .map(function (g, i) {
             return (
-              '<div class="testi-photo-wrap is-visible"><img src="' +
+              '<div class="testi-photo-wrap reveal" style="transition-delay:' +
+              (i * 0.08).toFixed(2) +
+              '"><img src="' +
               g.image +
               '" alt="' +
               escapeHtml(g.alt || "") +
@@ -85,6 +88,7 @@
           .join("");
       }
     });
+    if (window.observeReveals) window.observeReveals(root);
   }
 
   function applyHrefs(root, data) {
@@ -100,7 +104,7 @@
     el.innerHTML = data.stats
       .map(function (s, i) {
         return (
-          '<div class="stat reveal is-visible" style="transition-delay:' +
+          '<div class="stat reveal" style="transition-delay:' +
           (i * 0.1).toFixed(1) +
           's"><div class="stat-num">' +
           escapeHtml(s.num) +
@@ -110,6 +114,7 @@
         );
       })
       .join("");
+    if (window.observeReveals) window.observeReveals(root);
   }
 
   function loadJSON(url) {

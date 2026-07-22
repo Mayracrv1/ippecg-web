@@ -457,7 +457,7 @@
     letter-spacing:-0.005em;
     color:var(--white);
     display:inline-block;
-    background:rgba(199,50,8,0.55);
+    background:rgba(184,22,10,0.88);
     padding:6px 12px;
     border-radius:2px;
     box-decoration-break:clone;
@@ -608,6 +608,7 @@
   /* ---------- TESTIMONIALS TEASER ---------- */
   .testi{
     background:var(--bone);
+    padding-bottom:40px;
   }
   .testi-grid{
     display:grid;
@@ -676,7 +677,7 @@
   .instagram-cta{
     background:var(--bone);
     text-align:center;
-    padding:56px 32px 110px;
+    padding:0px 32px 110px;
   }
   .instagram-cta-card{
     display:inline-flex;
@@ -690,7 +691,7 @@
   .instagram-cta-photo{
     width:100%;
     max-width:340px;
-    aspect-ratio:9/10;
+    aspect-ratio:3/4;
     border-radius:12px;
     background-size:cover;
     background-position:top center;
@@ -729,7 +730,7 @@
     font-size:0.95rem;
   }
   @media (max-width:640px){
-    .instagram-cta{padding:40px 24px 70px;}
+    .instagram-cta{padding:0px 24px 70px;}
     .instagram-cta-photo{max-width:280px;}
   }
 
@@ -903,7 +904,15 @@
     max-width:600px;
     line-height:1.1;
   }
-  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500;}
+  .fc-top h2 em{
+    color:var(--bordo);
+    font-style:italic;
+    font-weight:500;
+    border:2px solid var(--white);
+    border-radius:8px;
+    padding:2px 14px;
+    display:inline-block;
+  }
   .footer-grid{
     display:grid;
     grid-template-columns:1.4fr 1fr 1fr 1fr;
@@ -1357,7 +1366,7 @@
 <section class="instagram-cta">
   <div class="section-inner">
     <a class="instagram-cta-card" href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">
-      <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile.jpg)">
+      <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile-2.jpg)">
         <span class="instagram-cta-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </span>

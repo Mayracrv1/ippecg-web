@@ -1,7 +1,7 @@
 {
   "title": "Curso de Barbería Inicial ✂️",
   "subtitle": "Aprendé el oficio de barbero desde cero: cortes clásicos y modernos, degradés, arreglo y diseño de barba, con práctica real sobre modelos desde las primeras clases.",
-  "hero_image": "images/barberia-img.jpg",
+  "hero_image": "images/barberia-img-8.jpg",
   "duration": "2 meses",
   "modality": "Clases teóricas y prácticas sobre modelos reales",
   "certification": "Diploma y carnet profesional al finalizar",
@@ -18,27 +18,39 @@
   "gallery": [
     {
       "image": "images/barberia-img-2.jpg",
-      "alt": "Trabajo de barbería alumnos IPPECG 1"
+      "alt": "Alexis rindiendo su exámen final de Barbería inicial"
     },
     {
       "image": "images/barberia-img-3.jpg",
-      "alt": "Trabajo de barbería alumnos IPPECG 2"
+      "alt": "Alumnos practicando degradé sobre cabezas de entrenamiento"
     },
     {
       "image": "images/barberia-img-4.jpg",
-      "alt": "Trabajo de barbería alumnos IPPECG 3"
+      "alt": "Alumno realizando un corte de barbería en el instituto"
     },
     {
       "image": "images/barberia-img-5.jpg",
-      "alt": "Trabajo de barbería alumnos IPPECG 4"
+      "alt": "Detalle de degradé realizado por un alumno de barbería"
     },
     {
       "image": "images/barberia-img-6.jpg",
-      "alt": "Trabajo de barbería alumnos IPPECG 5"
+      "alt": "Alumnos practicando cortes en el salón de IPPECG"
     },
     {
       "image": "images/barberia-img-7.jpg",
-      "alt": "Alumnos de barbería IPPECG con bandera argentina"
+      "alt": "Alumno realizando un corte de cabello a un modelo"
+    },
+    {
+      "image": "images/barberia-img-8.jpg",
+      "alt": "Alumnos de barbería practicando en el instituto"
+    },
+    {
+      "image": "images/barberia-img-9.jpg",
+      "alt": "Vista general del instituto durante las clases de barbería"
+    },
+    {
+      "image": "images/barberia-img-10.jpg",
+      "alt": "Alumnos de barbería IPPECG"
     }
   ]
 }

@@ -317,19 +317,58 @@
     gap:14px;
   }
   .credibility-icon{
+    position:relative;
     flex-shrink:0;
     width:52px;height:52px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:var(--bordo);
-    border:1px solid rgba(255,255,255,0.15);
+    background:linear-gradient(145deg, #e0431a 0%, #b8230a 55%, #8a1500 100%);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow:
+      inset 0 2px 4px rgba(255,255,255,0.18),
+      0 12px 30px rgba(0,0,0,0.35),
+      0 0 25px rgba(199,50,8,0.3);
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .credibility-icon::before{
+    content:"";
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    width:94px;height:94px;
+    border-radius:50%;
+    background:radial-gradient(rgba(199,50,8,0.45), rgba(199,50,8,0.18) 45%, transparent 72%);
+    z-index:-1;
+    filter:blur(10px);
+    transition:filter .35s ease, opacity .35s ease;
+  }
+  .credibility-icon::after{
+    content:"";
+    position:absolute;
+    top:6px;left:8px;
+    width:55%;height:22%;
+    border-radius:50%;
+    background:rgba(255,255,255,0.18);
+    filter:blur(4px);
+    transform:rotate(-12deg);
+  }
+  .credibility-item:hover .credibility-icon{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:
+      inset 0 2px 4px rgba(255,255,255,0.18),
+      0 18px 40px rgba(0,0,0,0.45),
+      0 0 45px rgba(199,50,8,0.5);
+  }
+  .credibility-item:hover .credibility-icon::before{
+    filter:blur(14px);
   }
   .credibility-item svg{
     flex-shrink:0;
     width:24px;height:24px;
     stroke:white;
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25));
   }
   .credibility-item.reveal{
     opacity:0;
@@ -929,7 +968,7 @@
     max-width:600px;
     line-height:1.1;
   }
-  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500; -webkit-text-stroke:1px var(--white); text-stroke:1px var(--white); paint-order:stroke fill;}
+  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500; background:linear-gradient(transparent 60%, rgba(255,255,255,.20) 60%, rgba(255,255,255,.05) 100%); padding:0 .15em;}
   .footer-grid{
     display:grid;
     grid-template-columns:1.4fr 1fr 1fr 1fr;
@@ -1004,7 +1043,7 @@
     .nav-cta svg{width:13px;height:13px;}
     .hero{min-height:0;}
     .workshops{padding:48px 24px;}
-    .hero-content{padding:90px 20px 32px;}
+    .hero-content{padding:90px 20px 16px;}
     h1.hero-title{font-size:clamp(2rem, 8.5vw, 2.6rem);}
     .testi-photos .testi-photo-wrap{width:260px;}
     .courses-grid{grid-template-columns:1fr;}

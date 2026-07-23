@@ -702,7 +702,9 @@
   }
   .testi-name{font-weight:700; font-size:0.88rem;}
   .testi-course{font-size:0.78rem; color:#8a8a8a;}
+  .carousel-pos{position:relative;}
   .testi-photos{
+    position:relative;
     display:flex;
     gap:20px;
     overflow-x:auto;
@@ -925,17 +927,23 @@
     scroll-snap-align:start;
   }
   .distribuidora-nav{
+    position:absolute;
+    top:50%;
+    left:0; right:0;
+    transform:translateY(-50%);
     display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:18px;
-    margin-bottom:8px;
+    justify-content:space-between;
+    padding:0 10px;
+    margin:0;
+    pointer-events:none;
   }
   .distribuidora-nav button{
+    pointer-events:auto;
     width:38px;height:38px;
     border-radius:50%;
-    border:1.5px solid var(--black);
-    background:var(--black);
+    border:1.5px solid rgba(255,255,255,0.6);
+    background:rgba(0,0,0,0.32);
+    backdrop-filter:blur(2px);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -1411,6 +1419,7 @@
   <div class="section-inner">
     <div class="eyebrow">Egresados</div>
     <h2 class="section-title">Lo que dicen quienes ya pasaron por el instituto.</h2>
+    <div class="carousel-pos">
     <div class="testi-photos" id="testiTrack" data-cms-list="testimonios_images" data-cms-list-type="testi">
       <div class="testi-photo-wrap reveal"><img src="images/index-img-35.jpg" alt="Testimonio de alumno IPPECG 1"></div>
       <div class="testi-photo-wrap reveal" style="transition-delay:0.08s"><img src="images/index-img-36.jpg" alt="Testimonio de alumno IPPECG 2"></div>
@@ -1426,6 +1435,7 @@
       <button type="button" aria-label="Siguiente" onclick="document.getElementById('testiTrack').scrollBy({left:380,behavior:'smooth'})">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
       </button>
+    </div>
     </div>
   </div>
 </section>

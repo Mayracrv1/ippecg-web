@@ -233,7 +233,7 @@
     width:fit-content;
     align-items:center;
     justify-content:center;
-    margin:8px auto 50px;
+    margin:8px auto 0;
     padding:12px 22px;
     font-size:0.85rem;
     font-weight:700;
@@ -884,7 +884,7 @@
   .distribuidora{
     background:var(--bone);
     padding-top:40px;
-    padding-bottom:0;
+    padding-bottom:50px;
   }
   .distribuidora-text{
     color:#4a4a4a;
@@ -968,7 +968,26 @@
     max-width:600px;
     line-height:1.1;
   }
-  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500; background:linear-gradient(transparent 60%, rgba(255,255,255,.20) 60%, rgba(255,255,255,.05) 100%); padding:0 .15em;}
+  .fc-top h2 em{
+    position:relative;
+    display:inline-block;
+    z-index:2;
+    color:var(--bordo);
+    font-style:italic;
+    font-weight:500;
+  }
+  .fc-top h2 em::before{
+    content:"";
+    position:absolute;
+    inset:-2px -6px;
+    background:
+      radial-gradient(circle at left, rgba(255,255,255,.95), transparent 30%),
+      radial-gradient(circle at right, rgba(255,255,255,.95), transparent 30%),
+      linear-gradient(90deg,#fff,#f8f8f8,#fff);
+    border-radius:14px;
+    filter:blur(5px);
+    z-index:-1;
+  }
   .footer-grid{
     display:grid;
     grid-template-columns:1.4fr 1fr 1fr 1fr;

@@ -301,8 +301,50 @@
     border-radius:2px;
     transition:transform .3s ease;
   }
-  .course-gallery-grid a{overflow:hidden; display:block; border-radius:2px;}
+  .course-gallery-grid a{overflow:hidden; display:block; border-radius:2px; cursor:pointer;}
   .course-gallery-grid a:hover img{transform:scale(1.06);}
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed; inset:0;
+    background:rgba(0,0,0,0.94);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    padding:24px;
+  }
+  .lightbox.active{display:flex;}
+  .lightbox-img{
+    max-width:88vw;
+    max-height:86vh;
+    object-fit:contain;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox-close, .lightbox-prev, .lightbox-next{
+    position:fixed;
+    width:44px;height:44px;
+    border-radius:50%;
+    border:1.5px solid rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.08);
+    color:var(--white);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .2s ease;
+    z-index:1000;
+  }
+  .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover{background:var(--bordo); border-color:var(--bordo);}
+  .lightbox-close{top:24px; right:24px; font-size:1.4rem; line-height:1;}
+  .lightbox-prev{left:24px; top:50%; transform:translateY(-50%); font-size:1.6rem;}
+  .lightbox-next{right:24px; top:50%; transform:translateY(-50%); font-size:1.6rem;}
+  @media (max-width:640px){
+    .lightbox-prev{left:10px;}
+    .lightbox-next{right:10px;}
+    .lightbox-close{top:14px; right:14px;}
+  }
 
   /* footer CTA */
   .footer-cta{
@@ -683,6 +725,13 @@
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
 </a>
 
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" aria-label="Cerrar">&times;</button>
+  <button type="button" class="lightbox-prev" aria-label="Anterior">&#8249;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button type="button" class="lightbox-next" aria-label="Siguiente">&#8250;</button>
+</div>
+
 
 <script>
 (function(){
@@ -726,6 +775,80 @@
     els.forEach(function(el){ observer.observe(el); });
   };
   window.observeReveals(document);
+})();
+</script>
+<script>
+(function(){
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var closeBtn = lightbox.querySelector('.lightbox-close');
+  var prevBtn = lightbox.querySelector('.lightbox-prev');
+  var nextBtn = lightbox.querySelector('.lightbox-next');
+  var images = [];
+  var currentIndex = 0;
+
+  function collectImages(){
+    images = Array.prototype.slice.call(document.querySelectorAll('.course-gallery-grid img'));
+  }
+
+  function showImage(){
+    if(!images.length) return;
+    var img = images[currentIndex];
+    lightboxImg.src = img.getAttribute('src');
+    lightboxImg.alt = img.getAttribute('alt') || '';
+  }
+
+  function openLightbox(index){
+    collectImages();
+    if(!images.length) return;
+    currentIndex = index;
+    showImage();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function nextImage(){
+    collectImages();
+    if(!images.length) return;
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  }
+
+  function prevImage(){
+    collectImages();
+    if(!images.length) return;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  }
+
+  document.addEventListener('click', function(e){
+    var link = e.target.closest ? e.target.closest('.course-gallery-grid a') : null;
+    if(link){
+      e.preventDefault();
+      collectImages();
+      var img = link.querySelector('img');
+      var idx = images.indexOf(img);
+      openLightbox(idx < 0 ? 0 : idx);
+    }
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  nextBtn.addEventListener('click', nextImage);
+  prevBtn.addEventListener('click', prevImage);
+  lightbox.addEventListener('click', function(e){
+    if(e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){
+    if(!lightbox.classList.contains('active')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') nextImage();
+    if(e.key === 'ArrowLeft') prevImage();
+  });
 })();
 </script>
 <script src="cms-loader.js"></script>

@@ -395,7 +395,7 @@
     .credibility-grid{grid-template-columns:repeat(2, 1fr);}
   }
   @media (max-width:640px){
-    .credibility{padding:28px 20px;}
+    .credibility{padding:18px 20px 28px;}
     .credibility-grid{grid-template-columns:1fr; gap:20px;}
   }
 
@@ -1055,6 +1055,7 @@
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media (max-width: 640px){
+    .fc-top h2{font-size:1.7rem;}
     section{padding:80px 28px;}
     .nav-wrap{padding:12px 16px;}
     .logo img{height:66px;}
@@ -1062,7 +1063,7 @@
     .nav-cta svg{width:13px;height:13px;}
     .hero{min-height:0;}
     .workshops{padding:48px 24px;}
-    .hero-content{padding:90px 20px 16px;}
+    .hero-content{padding:90px 20px 0px;}
     h1.hero-title{font-size:clamp(2rem, 8.5vw, 2.6rem);}
     .testi-photos .testi-photo-wrap{width:260px;}
     .courses-grid{grid-template-columns:1fr;}
@@ -1391,16 +1392,8 @@
       <img src="images/distribuidora-img-4.jpg" alt="Kits y accesorios de manicuría Distribuidora CBS">
       <img src="images/distribuidora-img-5.jpg" alt="Productos profesionales en la Distribuidora CBS">
       </div>
-      <div class="distribuidora-nav">
-        <button type="button" aria-label="Anterior" onclick="document.getElementById('distTrack').scrollBy({left:-180,behavior:'smooth'})">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button type="button" aria-label="Siguiente" onclick="document.getElementById('distTrack').scrollBy({left:180,behavior:'smooth'})">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
     </div>
-    <a class="btn-distribuidora" href="distribuidora.html">Ver todos los productos</a>
+    <a class="btn-distribuidora" href="distribuidora.html" style="margin-top:28px;">Ver todos los productos</a>
   </div>
 </section>
 

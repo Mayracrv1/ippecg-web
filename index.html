@@ -162,7 +162,7 @@
     z-index:2;
     max-width:1280px;
     margin:0 auto;
-    padding:0 32px 100px;
+    padding:0 32px 60px;
     width:100%;
   }
   .hero-eyebrow{
@@ -688,20 +688,27 @@
     max-width:360px;
     margin:0 auto;
   }
+  .instagram-cta-photo-frame{
+    width:100%;
+    max-width:260px;
+    aspect-ratio:3/4;
+    margin:0 auto 24px;
+    padding:4px;
+    border-radius:16px;
+    background:linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    box-shadow:0 8px 28px rgba(221,42,123,0.28);
+    transition:transform .3s ease;
+  }
+  .instagram-cta-card:hover .instagram-cta-photo-frame{transform:scale(1.02);}
   .instagram-cta-photo{
     width:100%;
-    max-width:340px;
-    aspect-ratio:3/4;
+    height:100%;
     border-radius:12px;
     background-size:cover;
     background-position:top center;
     position:relative;
-    margin-bottom:24px;
-    border:1px solid var(--line);
-    box-shadow:0 8px 24px rgba(0,0,0,0.12);
-    transition:transform .3s ease;
+    overflow:hidden;
   }
-  .instagram-cta-card:hover .instagram-cta-photo{transform:scale(1.02);}
   .instagram-cta-badge{
     position:absolute;
     bottom:14px;right:14px;
@@ -731,7 +738,7 @@
   }
   @media (max-width:640px){
     .instagram-cta{padding:0px 24px 70px;}
-    .instagram-cta-photo{max-width:280px;}
+    .instagram-cta-photo-frame{max-width:220px;}
   }
 
   .lightbox{
@@ -817,9 +824,11 @@
   /* ---------- DISTRIBUIDORA ---------- */
   .jornadas{
     background:var(--white);
+    padding-bottom:40px;
   }
   .distribuidora{
     background:var(--bone);
+    padding-top:40px;
     padding-bottom:0;
   }
   .distribuidora-text{
@@ -979,7 +988,7 @@
     .nav-cta svg{width:13px;height:13px;}
     .hero{min-height:78vh;}
     .workshops{padding:48px 24px;}
-    .hero-content{padding:90px 20px 70px;}
+    .hero-content{padding:90px 20px 32px;}
     h1.hero-title{font-size:clamp(2rem, 8.5vw, 2.6rem);}
     .testi-photos .testi-photo-wrap{width:260px;}
     .courses-grid{grid-template-columns:1fr;}
@@ -1317,7 +1326,7 @@
         </button>
       </div>
     </div>
-    <a class="btn-primary" style="margin-top:24px;" href="distribuidora.html">Ver todos los productos</a>
+    <a class="btn-primary" style="margin-top:8px; margin-bottom:50px;" href="distribuidora.html">Ver todos los productos</a>
   </div>
 </section>
 
@@ -1357,10 +1366,12 @@
 <section class="instagram-cta">
   <div class="section-inner">
     <a class="instagram-cta-card" href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">
-      <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile-2.jpg)">
-        <span class="instagram-cta-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </span>
+      <div class="instagram-cta-photo-frame">
+        <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile-2.jpg)">
+          <span class="instagram-cta-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </span>
+        </div>
       </div>
       <div class="instagram-cta-title">Seguinos en Instagram</div>
       <div class="instagram-cta-handle" data-cms-global="instagram_handle">@ippe.carinagonzalez</div>

@@ -228,6 +228,22 @@
     transition:background .25s ease, transform .25s ease;
   }
   .btn-primary:hover{background:var(--bordo-dark); transform:translateY(-2px);}
+  .btn-distribuidora{
+    display:flex;
+    width:fit-content;
+    align-items:center;
+    justify-content:center;
+    margin:8px auto 50px;
+    padding:12px 22px;
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--white);
+    border-radius:2px;
+    background:linear-gradient(135deg, #ff4d1c, #c2180a);
+    box-shadow:0 6px 18px rgba(194,24,10,0.32);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-distribuidora:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(194,24,10,0.4);}
   .btn-ghost{
     border:1.5px solid rgba(255,255,255,0.55);
     color:var(--white);
@@ -677,7 +693,7 @@
   .instagram-cta{
     background:var(--bone);
     text-align:center;
-    padding:0px 32px 110px;
+    padding:0px 32px 60px;
   }
   .instagram-cta-card{
     display:inline-flex;
@@ -737,7 +753,7 @@
     font-size:0.95rem;
   }
   @media (max-width:640px){
-    .instagram-cta{padding:0px 24px 70px;}
+    .instagram-cta{padding:0px 24px 30px;}
     .instagram-cta-photo-frame{max-width:220px;}
   }
 
@@ -895,7 +911,7 @@
   .footer-cta{
     background:var(--black);
     color:var(--white);
-    padding:110px 32px 60px;
+    padding:60px 32px 60px;
   }
   .fc-top{
     display:flex;
@@ -913,7 +929,7 @@
     max-width:600px;
     line-height:1.1;
   }
-  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500;}
+  .fc-top h2 em{color:var(--bordo); font-style:italic; font-weight:500; -webkit-text-stroke:1px var(--white); text-stroke:1px var(--white); paint-order:stroke fill;}
   .footer-grid{
     display:grid;
     grid-template-columns:1.4fr 1fr 1fr 1fr;
@@ -986,7 +1002,7 @@
     .logo img{height:66px;}
     .nav-cta{padding:8px 12px; font-size:0.72rem; gap:5px;}
     .nav-cta svg{width:13px;height:13px;}
-    .hero{min-height:78vh;}
+    .hero{min-height:0;}
     .workshops{padding:48px 24px;}
     .hero-content{padding:90px 20px 32px;}
     h1.hero-title{font-size:clamp(2rem, 8.5vw, 2.6rem);}
@@ -1326,7 +1342,7 @@
         </button>
       </div>
     </div>
-    <a class="btn-primary" style="margin-top:8px; margin-bottom:50px;" href="distribuidora.html">Ver todos los productos</a>
+    <a class="btn-distribuidora" href="distribuidora.html">Ver todos los productos</a>
   </div>
 </section>
 
@@ -1367,7 +1383,7 @@
   <div class="section-inner">
     <a class="instagram-cta-card" href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">
       <div class="instagram-cta-photo-frame">
-        <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile-2.jpg)">
+        <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile-3.jpg)">
           <span class="instagram-cta-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </span>

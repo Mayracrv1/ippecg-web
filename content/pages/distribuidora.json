@@ -1,0 +1,42 @@
+{
+  "title": "Distribuidora CBS",
+  "subtitle": "Nuestra distribuidora propia de productos e insumos para peluquería y estética, dentro del instituto. Todo lo que necesitás para tus cursos, talleres y práctica diaria.",
+  "hero_image": "images/distribuidora-img-2.jpg",
+  "text": "Dentro del instituto contamos con nuestra propia distribuidora de productos e insumos para peluquería y estética: Distribuidora CBS. Ahí nuestros alumnos pueden conseguir todo lo necesario para sus cursos y talleres, además de kits específicos para cada curso con los insumos esenciales para empezar a practicar desde el primer día.",
+  "instagram_link": "https://instagram.com/distribuidoracbs",
+  "instagram_handle": "@distribuidoracbs",
+  "gallery": [
+    {
+      "image": "images/distribuidora-img-1.jpg",
+      "alt": "Vitrina con productos de tratamiento y coloración Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-2.jpg",
+      "alt": "Planchas, bucles y productos de peinado Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-3.jpg",
+      "alt": "Cepillos, peines y accesorios de peluquería Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-4.jpg",
+      "alt": "Kits y accesorios de manicuría Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-5.jpg",
+      "alt": "Productos profesionales en la Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-6.jpg",
+      "alt": "Insumos de peluquería y estética Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-7.jpg",
+      "alt": "Estantería de productos de la Distribuidora CBS"
+    },
+    {
+      "image": "images/distribuidora-img-8.jpg",
+      "alt": "Vista general de productos Distribuidora CBS"
+    }
+  ]
+}

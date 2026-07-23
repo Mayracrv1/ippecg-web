@@ -181,6 +181,23 @@ collections:
               - {label: "Foto", name: "image", widget: "image"}
               - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
 
+      - name: "distribuidora"
+        label: "Distribuidora CBS (página propia)"
+        file: "content/pages/distribuidora.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Bajada / descripción corta", name: "subtitle", widget: "text"}
+          - {label: "Foto de portada", name: "hero_image", widget: "image"}
+          - {label: "Texto de la sección de insumos", name: "text", widget: "text"}
+          - {label: "Link de Instagram de la distribuidora", name: "instagram_link", widget: "string"}
+          - {label: "Usuario de Instagram (texto visible)", name: "instagram_handle", widget: "string"}
+          - label: "Galería de fotos de productos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+
   - name: "site"
     label: "Datos de contacto (aparecen en todo el sitio)"
     files:

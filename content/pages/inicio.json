@@ -93,32 +93,24 @@
   "distribuidora_instagram_handle": "@distribuidoracbs",
   "distribuidora_images": [
     {
-      "image": "images/index-img-28.jpg",
-      "alt": "Producto Distribuidora CBS 1"
+      "image": "images/distribuidora-img-1.jpg",
+      "alt": "Vitrina con productos de tratamiento y coloración Distribuidora CBS"
     },
     {
-      "image": "images/index-img-29.jpg",
-      "alt": "Producto Distribuidora CBS 2"
+      "image": "images/distribuidora-img-2.jpg",
+      "alt": "Planchas, bucles y productos de peinado Distribuidora CBS"
     },
     {
-      "image": "images/index-img-30.jpg",
-      "alt": "Producto Distribuidora CBS 3"
+      "image": "images/distribuidora-img-3.jpg",
+      "alt": "Cepillos, peines y accesorios de peluquería Distribuidora CBS"
     },
     {
-      "image": "images/index-img-31.jpg",
-      "alt": "Producto Distribuidora CBS 4"
+      "image": "images/distribuidora-img-4.jpg",
+      "alt": "Kits y accesorios de manicuría Distribuidora CBS"
     },
     {
-      "image": "images/index-img-32.jpg",
-      "alt": "Producto Distribuidora CBS 5"
-    },
-    {
-      "image": "images/index-img-33.jpg",
-      "alt": "Producto Distribuidora CBS 6"
-    },
-    {
-      "image": "images/index-img-34.jpg",
-      "alt": "Producto Distribuidora CBS 7"
+      "image": "images/distribuidora-img-5.jpg",
+      "alt": "Productos profesionales en la Distribuidora CBS"
     }
   ],
   "talleres_title": "Talleres y perfeccionamientos para seguir creciendo",

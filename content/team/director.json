@@ -1,6 +1,20 @@
 {
   "name": "Silvia Carina González",
-  "bio_p1": "La pasión de Silvia Carina González por el estilismo nació desde muy chica y, con los años, se transformó en su vocación y estilo de vida. A lo largo de su carrera compitió en prestigiosos certámenes de belleza nacionales e internacionales, consolidando su experiencia en lo más alto del rubro.",
-  "bio_p2": "En 2017 fundó el instituto con el sueño de formar a las nuevas generaciones de profesionales, ofreciendo una formación integral que va más allá del aula: acompaña personalmente a sus alumnos en competencias y en prácticas solidarias en comedores comunitarios, porque cree que un gran profesional se destaca tanto por su excelencia técnica como por su empatía y compromiso social. Hoy, como directora, transmite toda su experiencia internacional para que cada estudiante descubra su máximo potencial y alcance el éxito.",
-  "photo": "images/nosotros-director.jpg"
+  "bio_p1": "Silvia Carina González descubrió su pasión por el estilismo desde muy joven y la convirtió en una profesión marcada por la excelencia y la formación continua. A lo largo de su trayectoria participó en importantes certámenes nacionales e internacionales, consolidando una amplia experiencia en el rubro. En 2017 fundó IPPECG con el propósito de formar profesionales de excelencia, acompañando a sus alumnos tanto en su desarrollo técnico como humano, transmitiendo los valores, la experiencia y el compromiso que la caracterizan.",
+  "photo": "images/nosotros-director.jpg",
+  "cert_text": "La excelencia profesional se construye a través del aprendizaje continuo. A lo largo de su trayectoria, Carina González obtuvo certificaciones oficiales y participó en capacitaciones que respaldan su experiencia como instructora y directora de IPPECG. Reafirma su compromiso con la actualización permanente y la calidad educativa que transmite a cada uno de sus alumnos.",
+  "certificados": [
+    {
+      "image": "images/nosotros-certificado-1.jpg",
+      "alt": "Constancia de aprobación del curso, Gobierno de la Ciudad de Buenos Aires"
+    },
+    {
+      "image": "images/nosotros-certificado-2.jpg",
+      "alt": "Diploma de Honor y Causa, Confederación Mundial Libre"
+    },
+    {
+      "image": "images/nosotros-certificado-3.jpg",
+      "alt": "Certificado de aprobación, Formación Profesional Nivel II"
+    }
+  ]
 }

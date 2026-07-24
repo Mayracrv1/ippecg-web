@@ -227,9 +227,15 @@ collections:
         file: "content/team/director.json"
         fields:
           - {label: "Nombre", name: "name", widget: "string"}
-          - {label: "Biografía (párrafo 1)", name: "bio_p1", widget: "text"}
-          - {label: "Biografía (párrafo 2)", name: "bio_p2", widget: "text"}
+          - {label: "Biografía", name: "bio_p1", widget: "text"}
           - {label: "Foto", name: "photo", widget: "image"}
+          - {label: "Texto de la sección Formación y Certificaciones", name: "cert_text", widget: "text"}
+          - label: "Certificados (fotos)"
+            name: "certificados"
+            widget: "list"
+            fields:
+              - {label: "Foto del certificado", name: "image", widget: "image"}
+              - {label: "Descripción", name: "alt", widget: "string", required: false}
 
       - name: "teacher-maquillaje"
         label: "Profesora de Maquillaje"

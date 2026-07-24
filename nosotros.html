@@ -343,6 +343,88 @@
     font-size:0.78rem; color:rgba(255,255,255,0.45);
   }
 
+  .certificaciones{
+    background:var(--bone);
+    padding:100px 32px;
+  }
+  .certificaciones .eyebrow{color:var(--bordo);}
+  .certificaciones h2.section-title{color:var(--black); margin-bottom:18px;}
+  .cert-text{
+    max-width:680px;
+    color:#4a4a4a;
+    font-size:1.05rem;
+    line-height:1.65;
+  }
+  .cert-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,320px));
+    justify-content:start;
+    gap:24px;
+    margin-top:48px;
+  }
+  .cert-grid a{
+    display:block;
+    background:var(--white);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .cert-grid a:hover{transform:scale(1.025); box-shadow:0 10px 28px rgba(0,0,0,0.14);}
+  .cert-grid a img{width:100%; height:auto; display:block;}
+  .cert-caption{
+    margin-top:20px;
+    font-size:0.85rem;
+    color:#9a9a9a;
+    letter-spacing:0.02em;
+  }
+  @media (max-width:900px){
+    .cert-grid{grid-template-columns:1fr; max-width:420px; gap:16px;}
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed; inset:0;
+    background:rgba(0,0,0,0.94);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    padding:24px;
+  }
+  .lightbox.active{display:flex;}
+  .lightbox-img{
+    max-width:88vw;
+    max-height:86vh;
+    object-fit:contain;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox-close{
+    position:fixed;
+    top:24px; right:24px;
+    width:44px;height:44px;
+    border-radius:50%;
+    border:1.5px solid rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.08);
+    color:var(--white);
+    font-size:1.4rem;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .2s ease;
+    z-index:1000;
+  }
+  @media (hover: hover){
+    .lightbox-close:hover{background:var(--bordo); border-color:var(--bordo);}
+  }
+  .lightbox-close:active{background:var(--bordo); border-color:var(--bordo);}
+  @media (max-width:640px){
+    .lightbox-close{top:14px; right:14px;}
+  }
   .wa-bubble{
     position:fixed; bottom:26px; right:26px; z-index:200;
     width:60px; height:60px; background:#25D366; border-radius:50%;
@@ -583,14 +665,27 @@
       <div class="eyebrow">Nuestra directora</div>
       <h2 class="section-title" data-cms="name">Silvia Carina González</h2>
       <div class="about-text">
-        <p data-cms="bio_p1">La pasión de Silvia Carina González por el estilismo nació desde muy chica y, con los años, se transformó en su vocación y estilo de vida. A lo largo de su carrera compitió en prestigiosos certámenes de belleza nacionales e internacionales, consolidando su experiencia en lo más alto del rubro.</p>
-        <p data-cms="bio_p2">En 2017 fundó el instituto con el sueño de formar a las nuevas generaciones de profesionales, ofreciendo una formación integral que va más allá del aula: acompaña personalmente a sus alumnos en competencias y en prácticas solidarias en comedores comunitarios, porque cree que un gran profesional se destaca tanto por su excelencia técnica como por su empatía y compromiso social. Hoy, como directora, transmite toda su experiencia internacional para que cada estudiante descubra su máximo potencial y alcance el éxito.</p>
+        <p data-cms="bio_p1">Silvia Carina González descubrió su pasión por el estilismo desde muy joven y la convirtió en una profesión marcada por la excelencia y la formación continua. A lo largo de su trayectoria participó en importantes certámenes nacionales e internacionales, consolidando una amplia experiencia en el rubro. En 2017 fundó IPPECG con el propósito de formar profesionales de excelencia, acompañando a sus alumnos tanto en su desarrollo técnico como humano, transmitiendo los valores, la experiencia y el compromiso que la caracterizan.</p>
       </div>
     </div>
     <div class="about-visual">
       <img src="images/nosotros-director.jpg" alt="Silvia Carina González, directora de IPPECG" data-cms="photo">
       <div class="about-visual-tag" data-cms="name">Silvia Carina González</div>
     </div>
+  </div>
+</section>
+
+<section class="certificaciones">
+  <div class="section-inner">
+    <div class="eyebrow">Trayectoria</div>
+    <h2 class="section-title">Formación y Certificaciones</h2>
+    <p class="cert-text" data-cms="cert_text">La excelencia profesional se construye a través del aprendizaje continuo. A lo largo de su trayectoria, Carina González obtuvo certificaciones oficiales y participó en capacitaciones que respaldan su experiencia como instructora y directora de IPPECG. Reafirma su compromiso con la actualización permanente y la calidad educativa que transmite a cada uno de sus alumnos.</p>
+    <div class="cert-grid" data-cms-list="certificados">
+      <a href="#"><img src="images/nosotros-certificado-1.jpg" alt="Constancia de aprobación del curso, Gobierno de la Ciudad de Buenos Aires"></a>
+      <a href="#"><img src="images/nosotros-certificado-2.jpg" alt="Diploma de Honor y Causa, Confederación Mundial Libre"></a>
+      <a href="#"><img src="images/nosotros-certificado-3.jpg" alt="Certificado de aprobación, Formación Profesional Nivel II"></a>
+    </div>
+    <div class="cert-caption">Clic en un certificado para ampliarlo</div>
   </div>
 </section>
 
@@ -655,6 +750,11 @@
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
 </a>
 
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
 
 <script>
 (function(){
@@ -668,6 +768,42 @@
     a.addEventListener('click', function(){
       body.classList.remove('menu-open');
     });
+  });
+})();
+</script>
+<script>
+(function(){
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var closeBtn = lightbox.querySelector('.lightbox-close');
+
+  function openLightbox(src, alt){
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e){
+    var link = e.target.closest ? e.target.closest('.cert-grid a') : null;
+    if(link){
+      e.preventDefault();
+      var img = link.querySelector('img');
+      if(img) openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
+    }
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e){
+    if(e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){
+    if(lightbox.classList.contains('active') && e.key === 'Escape') closeLightbox();
   });
 })();
 </script>

@@ -346,7 +346,10 @@
     transition:all .2s ease;
     z-index:1000;
   }
-  .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover{background:var(--bordo); border-color:var(--bordo);}
+  @media (hover: hover){
+    .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover{background:var(--bordo); border-color:var(--bordo);}
+  }
+  .lightbox-close:active, .lightbox-prev:active, .lightbox-next:active{background:var(--bordo); border-color:var(--bordo);}
   .lightbox-close{top:24px; right:24px; font-size:1.4rem; line-height:1;}
   .lightbox-prev{left:24px; top:50%; transform:translateY(-50%); font-size:1.6rem;}
   .lightbox-next{right:24px; top:50%; transform:translateY(-50%); font-size:1.6rem;}

@@ -140,5 +140,47 @@
       "image": "images/index-img-40.jpg",
       "alt": "Testimonio de alumno IPPECG 6"
     }
+  ],
+  "egresados_cert_images": [
+    {
+      "image": "images/egresados-1.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-2.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-3.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-4.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-5.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-6.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-7.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-8.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-9.jpg",
+      "alt": "Egresados con su certificado"
+    },
+    {
+      "image": "images/egresados-10.jpg",
+      "alt": "Egresados con su certificado"
+    }
   ]
 }

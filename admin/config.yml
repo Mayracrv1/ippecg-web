@@ -180,6 +180,12 @@ collections:
             fields:
               - {label: "Foto", name: "image", widget: "image"}
               - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
+          - label: "Fotos de Egresados con su certificado"
+            name: "egresados_cert_images"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Descripción de la foto", name: "alt", widget: "string", required: false}
 
       - name: "distribuidora"
         label: "Distribuidora CBS (página propia)"

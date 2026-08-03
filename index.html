@@ -617,14 +617,26 @@
     overflow:hidden;
     aspect-ratio:4/5;
   }
-  .about-visual img{
-    width:100%;height:100%;object-fit:cover;
+  .about-visual-track{
+    display:flex;
+    height:100%;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  .about-visual-track::-webkit-scrollbar{display:none;}
+  .about-visual-track img{
+    height:100%;width:auto;flex:0 0 auto;
+    object-fit:cover;
+    scroll-snap-align:start;
     filter:grayscale(0.15) contrast(1.05);
   }
   .about-visual::after{
     content:'';
-    position:absolute;inset:0;
+    position:absolute;
+    inset:0;
     background:linear-gradient(180deg, transparent 60%, rgba(10,10,10,0.7));
+    pointer-events:none;
   }
   .about-visual-tag{
     position:absolute;
@@ -787,6 +799,7 @@
     font-weight:600;
     font-size:1.4rem;
     color:var(--black);
+    margin-bottom:20px;
   }
   .instagram-cta-handle{
     color:var(--bordo);
@@ -1002,9 +1015,9 @@
     position:absolute;
     inset:-2px -6px;
     background:
-      radial-gradient(circle at left, rgba(255,255,255,.95), transparent 30%),
-      radial-gradient(circle at right, rgba(255,255,255,.95), transparent 30%),
-      linear-gradient(90deg,#fff,#f8f8f8,#fff);
+      radial-gradient(circle at left, rgba(255,255,255,.35), transparent 30%),
+      radial-gradient(circle at right, rgba(255,255,255,.35), transparent 30%),
+      linear-gradient(90deg,rgba(255,255,255,.28),rgba(248,248,248,.28),rgba(255,255,255,.28));
     border-radius:14px;
     filter:blur(5px);
     z-index:-1;
@@ -1188,7 +1201,7 @@
       <a href="peluqueria.html">Peluquería</a>
       <a href="estetica.html">Estética</a>
       <a href="nosotros.html">Quiénes somos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
     <a class="nav-cta" href="https://wa.me/5491132068482" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.7 8.23 8.24 0 4.54-3.7 8.22-8.23 8.22z"/></svg>
@@ -1202,7 +1215,7 @@
       <a href="peluqueria.html">Peluquería</a>
       <a href="estetica.html">Estética</a>
       <a href="nosotros.html">Quiénes somos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="contacto.html">Contacto</a>
 </div>
 
 
@@ -1354,8 +1367,19 @@
       </div>
     </div>
     <div class="about-visual">
-      <img src="images/index-img-11.jpg" alt="Egresadas de IPPECG con sus certificados">
-      <div class="about-visual-tag">Egresadas con su certificado</div>
+      <div class="about-visual-track" id="egresadosTrack" data-cms-list="egresados_cert_images" data-cms-list-type="img">
+      <img src="images/egresados-1.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-2.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-3.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-4.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-5.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-6.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-7.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-8.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-9.jpg" alt="Egresados con su certificado">
+      <img src="images/egresados-10.jpg" alt="Egresados con su certificado">
+      </div>
+      <div class="about-visual-tag">Egresados con su certificado</div>
     </div>
   </div>
 </section>
@@ -1456,6 +1480,7 @@
 <section class="instagram-cta">
   <div class="section-inner">
     <a class="instagram-cta-card" href="https://www.instagram.com/ippe.carinagonzalez/" target="_blank" rel="noopener" data-cms-global-href="instagram_link">
+      <div class="instagram-cta-title">Seguinos en Instagram</div>
       <div class="instagram-cta-photo-frame">
         <div class="instagram-cta-photo" style="background-image:url(images/instagram-profile-3.jpg)">
           <span class="instagram-cta-badge">
@@ -1463,7 +1488,6 @@
           </span>
         </div>
       </div>
-      <div class="instagram-cta-title">Seguinos en Instagram</div>
       <div class="instagram-cta-handle" data-cms-global="instagram_handle">@ippe.carinagonzalez</div>
       <p class="instagram-cta-text">Enterate de todas las novedades ✨</p>
     </a>
@@ -1603,6 +1627,7 @@
   autoScrollStep('jornadaTrack', 2000);
   autoScrollStep('distTrack', 1500);
   autoScrollStep('testiTrack', 2500);
+  autoScrollStep('egresadosTrack', 2200);
 })();
 </script>
 <script>
